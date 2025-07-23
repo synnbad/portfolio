@@ -13,7 +13,9 @@ function Index() {
             {/* Profile Image Placeholder */}
             <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-portfolio-primary to-portfolio-accent flex items-center justify-center">
               <div className="w-28 h-28 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-400 text-sm font-medium">Profile Photo</span>
+                <span className="text-gray-400 text-sm font-medium">
+                  Profile Photo
+                </span>
               </div>
             </div>
 
@@ -68,9 +70,11 @@ function Index() {
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 I'm a multidisciplinary technologist with a passion for cloud
-                computing, automation, and spatial analysis. Whether I'm building
-                Python-based GIS tools or developing accessible web solutions, I aim to design experiences that
-                are as useful as they are beautiful. In my free time, I enjoy creating 3D art and renders using Blender.
+                computing, automation, and spatial analysis. Whether I'm
+                building Python-based GIS tools or developing accessible web
+                solutions, I aim to design experiences that are as useful as
+                they are beautiful. In my free time, I enjoy creating 3D art and
+                renders using Blender.
               </p>
             </div>
 
@@ -165,7 +169,9 @@ function Index() {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">Web Accessibility</span>
+                  <span className="text-sm text-gray-600">
+                    Web Accessibility
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
@@ -175,7 +181,9 @@ function Index() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">Innovation Solutions</span>
+                  <span className="text-sm text-gray-600">
+                    Innovation Solutions
+                  </span>
                 </div>
               </div>
             </SectionCard>

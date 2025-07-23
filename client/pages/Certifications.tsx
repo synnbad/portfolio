@@ -9,8 +9,9 @@ const Certifications = () => {
       date: "2024",
       badgeUrl: "#",
       credlyUrl: "https://www.credly.com/users/your-profile",
-      description: "Foundational understanding of AWS Cloud services, architecture, security, and pricing models.",
-      skills: ["Cloud Computing", "AWS Services", "Security", "Pricing Models"]
+      description:
+        "Foundational understanding of AWS Cloud services, architecture, security, and pricing models.",
+      skills: ["Cloud Computing", "AWS Services", "Security", "Pricing Models"],
     },
     {
       title: "Google IT Automation with Python",
@@ -18,9 +19,16 @@ const Certifications = () => {
       date: "2023",
       badgeUrl: "#",
       credlyUrl: "https://www.credly.com/users/your-profile",
-      description: "Comprehensive program covering Python automation, Git, troubleshooting, and configuration management.",
-      skills: ["Python", "Automation", "Git", "Linux", "Configuration Management"]
-    }
+      description:
+        "Comprehensive program covering Python automation, Git, troubleshooting, and configuration management.",
+      skills: [
+        "Python",
+        "Automation",
+        "Git",
+        "Linux",
+        "Configuration Management",
+      ],
+    },
   ];
 
   const inProgressCertifications = [
@@ -28,22 +36,31 @@ const Certifications = () => {
       title: "AWS Developer Associate",
       issuer: "Amazon Web Services",
       expectedDate: "Q2 2024",
-      description: "Advanced AWS certification focusing on developing and maintaining applications on AWS platform.",
-      skills: ["AWS SDK", "Lambda", "DynamoDB", "API Gateway", "CloudFormation"]
-    }
+      description:
+        "Advanced AWS certification focusing on developing and maintaining applications on AWS platform.",
+      skills: [
+        "AWS SDK",
+        "Lambda",
+        "DynamoDB",
+        "API Gateway",
+        "CloudFormation",
+      ],
+    },
   ];
 
   const plannedCertifications = [
     {
       title: "AWS Solutions Architect Associate",
       issuer: "Amazon Web Services",
-      description: "Designing distributed systems and architectures on AWS platform."
+      description:
+        "Designing distributed systems and architectures on AWS platform.",
     },
     {
       title: "Google Cloud Professional Cloud Architect",
       issuer: "Google Cloud",
-      description: "Designing and planning cloud solution architecture using Google Cloud technologies."
-    }
+      description:
+        "Designing and planning cloud solution architecture using Google Cloud technologies.",
+    },
   ];
 
   return (
@@ -56,7 +73,9 @@ const Certifications = () => {
               Professional Certifications
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Continuous learning through industry-recognized certifications that validate my expertise in cloud computing, automation, and modern development practices.
+              Continuous learning through industry-recognized certifications
+              that validate my expertise in cloud computing, automation, and
+              modern development practices.
             </p>
           </div>
 
@@ -71,14 +90,21 @@ const Certifications = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {completedCertifications.map((cert, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h3 className="font-heading font-semibold text-xl text-portfolio-dark-text mb-2">
                         {cert.title}
                       </h3>
-                      <p className="text-portfolio-primary font-medium">{cert.issuer}</p>
-                      <p className="text-sm text-gray-500">Earned: {cert.date}</p>
+                      <p className="text-portfolio-primary font-medium">
+                        {cert.issuer}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        Earned: {cert.date}
+                      </p>
                     </div>
                     <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center">
                       <Award className="w-8 h-8 text-green-600" />
@@ -89,7 +115,10 @@ const Certifications = () => {
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {cert.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">
+                      <span
+                        key={skillIndex}
+                        className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full"
+                      >
                         {skill}
                       </span>
                     ))}
@@ -125,14 +154,21 @@ const Certifications = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {inProgressCertifications.map((cert, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h3 className="font-heading font-semibold text-xl text-portfolio-dark-text mb-2">
                         {cert.title}
                       </h3>
-                      <p className="text-portfolio-primary font-medium">{cert.issuer}</p>
-                      <p className="text-sm text-portfolio-accent font-medium">Expected: {cert.expectedDate}</p>
+                      <p className="text-portfolio-primary font-medium">
+                        {cert.issuer}
+                      </p>
+                      <p className="text-sm text-portfolio-accent font-medium">
+                        Expected: {cert.expectedDate}
+                      </p>
                     </div>
                     <div className="w-16 h-16 bg-gradient-to-br from-portfolio-accent/20 to-portfolio-accent/30 rounded-lg flex items-center justify-center">
                       <Clock className="w-8 h-8 text-portfolio-accent" />
@@ -143,7 +179,10 @@ const Certifications = () => {
 
                   <div className="flex flex-wrap gap-2">
                     {cert.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="px-2 py-1 text-xs bg-portfolio-accent/10 text-portfolio-accent rounded-full">
+                      <span
+                        key={skillIndex}
+                        className="px-2 py-1 text-xs bg-portfolio-accent/10 text-portfolio-accent rounded-full"
+                      >
                         {skill}
                       </span>
                     ))}
@@ -161,11 +200,16 @@ const Certifications = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {plannedCertifications.map((cert, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-xl p-6 border border-gray-200"
+                >
                   <h3 className="font-heading font-semibold text-lg text-portfolio-dark-text mb-2">
                     {cert.title}
                   </h3>
-                  <p className="text-portfolio-primary font-medium mb-2">{cert.issuer}</p>
+                  <p className="text-portfolio-primary font-medium mb-2">
+                    {cert.issuer}
+                  </p>
                   <p className="text-gray-600 text-sm">{cert.description}</p>
                 </div>
               ))}
@@ -178,7 +222,8 @@ const Certifications = () => {
               View All Certifications
             </h3>
             <p className="text-gray-600 mb-6">
-              Visit my Credly profile to see verified digital badges and detailed certification information.
+              Visit my Credly profile to see verified digital badges and
+              detailed certification information.
             </p>
             <a
               href="https://www.credly.com/users/your-profile"
