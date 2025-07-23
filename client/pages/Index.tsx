@@ -10,6 +10,13 @@ function Index() {
       <section className="relative min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-6">
+            {/* Profile Image Placeholder */}
+            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-portfolio-primary to-portfolio-accent flex items-center justify-center">
+              <div className="w-28 h-28 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-400 text-sm font-medium">Profile Photo</span>
+              </div>
+            </div>
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight">
               <span className="text-portfolio-dark-text">
                 Creative Technologist
