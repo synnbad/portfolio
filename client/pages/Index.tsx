@@ -1,62 +1,176 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import Layout from '@/components/Layout';
+import CustomButton from '@/components/ui/custom-button';
+import SectionCard from '@/components/ui/section-card';
+import { Code, Cloud, Palette, ArrowRight, CheckCircle } from 'lucide-react';
 
-export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
-
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
-
+function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
-      </div>
-    </div>
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight">
+              <span className="text-portfolio-dark-text">Creative Technologist</span>
+              <br />
+              <span className="bg-gradient-to-r from-portfolio-primary to-portfolio-accent bg-clip-text text-transparent">
+                Cloud & Automation Enthusiast
+              </span>
+              <br />
+              <span className="text-portfolio-dark-text">3D Artist</span>
+            </h1>
+            
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Bridging code, creativity, and accessibility—I'm a developer, designer, and digital problem-solver with a passion for automation, GIS innovation, and 3D storytelling.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <CustomButton 
+              variant="primary" 
+              size="lg" 
+              href="/projects"
+              className="text-lg px-8 py-4"
+            >
+              View Projects
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </CustomButton>
+            <CustomButton 
+              variant="outline" 
+              size="lg" 
+              href="/contact"
+              className="text-lg px-8 py-4"
+            >
+              Get In Touch
+            </CustomButton>
+          </div>
+        </div>
+      </section>
+
+      {/* About Me Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-portfolio-dark-text mb-6">
+              About Me
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              I'm a multidisciplinary technologist with a passion for cloud computing, automation, and spatial analysis. Whether I'm building Python-based GIS tools, developing accessible web solutions, or crafting cinematic 3D renders, I aim to design experiences that are as useful as they are beautiful.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Focus Areas Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-portfolio-dark-text mb-6">
+              Focus Areas
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Specializing in the intersection of technology, creativity, and accessibility
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <SectionCard
+              title="Tech / DevOps / Python"
+              description="I specialize in Python-driven automation and DevOps workflows that power scalable systems."
+              icon={<Code className="w-6 h-6 text-white" />}
+            >
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">Python Automation</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">DevOps Workflows</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">System Integration</span>
+                </div>
+              </div>
+            </SectionCard>
+
+            <SectionCard
+              title="GIS / Cloud"
+              description="I develop GIS-integrated tools and cloud-native solutions that enhance real-world accessibility."
+              icon={<Cloud className="w-6 h-6 text-white" />}
+            >
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">AWS Cloud Solutions</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">ArcGIS Development</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">Spatial Analysis</span>
+                </div>
+              </div>
+            </SectionCard>
+
+            <SectionCard
+              title="3D Modeling"
+              description="I create immersive 3D scenes using Blender, blending realism with imagination."
+              icon={<Palette className="w-6 h-6 text-white" />}
+            >
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">Blender Mastery</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">Cinematic Renders</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-gray-600">3D Storytelling</span>
+                </div>
+              </div>
+            </SectionCard>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-portfolio-dark-text mb-6">
+            Ready to Collaborate?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Whether you need cloud automation, GIS solutions, or want to discuss the latest in accessibility tech, I'd love to connect.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <CustomButton 
+              variant="primary" 
+              size="lg" 
+              href="/projects"
+              className="text-lg px-8 py-4"
+            >
+              Explore My Work
+            </CustomButton>
+            <CustomButton 
+              variant="accent" 
+              size="lg" 
+              href="/contact"
+              className="text-lg px-8 py-4"
+            >
+              Let's Connect
+            </CustomButton>
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 }
+
+export default Index;
