@@ -28,6 +28,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         className,
       )}
     >
+      {/* Project Image Placeholder */}
+      <div className="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+        <div className="text-center text-gray-400">
+          <div className="w-8 h-8 mx-auto mb-2 bg-gray-300 rounded flex items-center justify-center">
+            <span className="text-sm">📷</span>
+          </div>
+          <p className="text-xs font-medium">Project Image</p>
+        </div>
+      </div>
+
       <div className="flex items-start justify-between mb-4">
         <h3 className="font-heading font-semibold text-lg text-portfolio-dark-text group-hover:text-portfolio-primary transition-colors">
           {title}
