@@ -1,7 +1,7 @@
-import Layout from '@/components/Layout';
-import CustomButton from '@/components/ui/custom-button';
-import SectionCard from '@/components/ui/section-card';
-import { Code, Cloud, Palette, ArrowRight, CheckCircle } from 'lucide-react';
+import Layout from "@/components/Layout";
+import CustomButton from "@/components/ui/custom-button";
+import SectionCard from "@/components/ui/section-card";
+import { Code, Cloud, Palette, ArrowRight, CheckCircle } from "lucide-react";
 
 function Index() {
   return (
@@ -11,7 +11,9 @@ function Index() {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight">
-              <span className="text-portfolio-dark-text">Creative Technologist</span>
+              <span className="text-portfolio-dark-text">
+                Creative Technologist
+              </span>
               <br />
               <span className="bg-gradient-to-r from-portfolio-primary to-portfolio-accent bg-clip-text text-transparent">
                 Cloud & Automation Enthusiast
@@ -19,25 +21,27 @@ function Index() {
               <br />
               <span className="text-portfolio-dark-text">3D Artist</span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Bridging code, creativity, and accessibility—I'm a developer, designer, and digital problem-solver with a passion for automation, GIS innovation, and 3D storytelling.
+              Bridging code, creativity, and accessibility—I'm a developer,
+              designer, and digital problem-solver with a passion for
+              automation, GIS innovation, and 3D storytelling.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <CustomButton 
-              variant="primary" 
-              size="lg" 
+            <CustomButton
+              variant="primary"
+              size="lg"
               href="/projects"
               className="text-lg px-8 py-4"
             >
               View Projects
               <ArrowRight className="ml-2 w-5 h-5" />
             </CustomButton>
-            <CustomButton 
-              variant="outline" 
-              size="lg" 
+            <CustomButton
+              variant="outline"
+              size="lg"
               href="/contact"
               className="text-lg px-8 py-4"
             >
@@ -55,7 +59,11 @@ function Index() {
               About Me
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              I'm a multidisciplinary technologist with a passion for cloud computing, automation, and spatial analysis. Whether I'm building Python-based GIS tools, developing accessible web solutions, or crafting cinematic 3D renders, I aim to design experiences that are as useful as they are beautiful.
+              I'm a multidisciplinary technologist with a passion for cloud
+              computing, automation, and spatial analysis. Whether I'm building
+              Python-based GIS tools, developing accessible web solutions, or
+              crafting cinematic 3D renders, I aim to design experiences that
+              are as useful as they are beautiful.
             </p>
           </div>
         </div>
@@ -69,7 +77,8 @@ function Index() {
               Focus Areas
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Specializing in the intersection of technology, creativity, and accessibility
+              Specializing in the intersection of technology, creativity, and
+              accessibility
             </p>
           </div>
 
@@ -82,15 +91,21 @@ function Index() {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">Python Automation</span>
+                  <span className="text-sm text-gray-600">
+                    Python Automation
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">DevOps Workflows</span>
+                  <span className="text-sm text-gray-600">
+                    DevOps Workflows
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">System Integration</span>
+                  <span className="text-sm text-gray-600">
+                    System Integration
+                  </span>
                 </div>
               </div>
             </SectionCard>
@@ -103,15 +118,21 @@ function Index() {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">AWS Cloud Solutions</span>
+                  <span className="text-sm text-gray-600">
+                    AWS Cloud Solutions
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">ArcGIS Development</span>
+                  <span className="text-sm text-gray-600">
+                    ArcGIS Development
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">Spatial Analysis</span>
+                  <span className="text-sm text-gray-600">
+                    Spatial Analysis
+                  </span>
                 </div>
               </div>
             </SectionCard>
@@ -128,7 +149,9 @@ function Index() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">Cinematic Renders</span>
+                  <span className="text-sm text-gray-600">
+                    Cinematic Renders
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
@@ -147,20 +170,21 @@ function Index() {
             Ready to Collaborate?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Whether you need cloud automation, GIS solutions, or want to discuss the latest in accessibility tech, I'd love to connect.
+            Whether you need cloud automation, GIS solutions, or want to discuss
+            the latest in accessibility tech, I'd love to connect.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CustomButton 
-              variant="primary" 
-              size="lg" 
+            <CustomButton
+              variant="primary"
+              size="lg"
               href="/projects"
               className="text-lg px-8 py-4"
             >
               Explore My Work
             </CustomButton>
-            <CustomButton 
-              variant="accent" 
-              size="lg" 
+            <CustomButton
+              variant="accent"
+              size="lg"
               href="/contact"
               className="text-lg px-8 py-4"
             >

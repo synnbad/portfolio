@@ -1,59 +1,61 @@
-import Layout from '@/components/Layout';
-import ProjectCard from '@/components/ui/project-card';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
+import Layout from "@/components/Layout";
+import ProjectCard from "@/components/ui/project-card";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState('tech');
+  const [activeTab, setActiveTab] = useState("tech");
 
   const tabs = [
-    { id: 'tech', label: '🛠️ Tech Projects' },
-    { id: 'gis', label: '🌍 GIS / Automation' },
-    { id: 'ai', label: '🤖 AI / Accessibility' },
+    { id: "tech", label: "🛠️ Tech Projects" },
+    { id: "gis", label: "🌍 GIS / Automation" },
+    { id: "ai", label: "🤖 AI / Accessibility" },
   ];
 
   const techProjects = [
     {
-      title: 'Omeka Migration Tool',
-      description: 'A desktop UI tool to migrate image and metadata records between Omeka platforms using their APIs.',
-      tech: 'Python, Tkinter, REST API',
-      github: 'https://github.com/synnbad/omeka-migration-tool',
-      status: 'completed' as const,
+      title: "Omeka Migration Tool",
+      description:
+        "A desktop UI tool to migrate image and metadata records between Omeka platforms using their APIs.",
+      tech: "Python, Tkinter, REST API",
+      github: "https://github.com/synnbad/omeka-migration-tool",
+      status: "completed" as const,
     },
     {
-      title: 'System Health Check',
-      description: 'Script to monitor system metrics and send email alerts.',
-      tech: 'Python, psutil, Cron',
-      status: 'completed' as const,
+      title: "System Health Check",
+      description: "Script to monitor system metrics and send email alerts.",
+      tech: "Python, psutil, Cron",
+      status: "completed" as const,
     },
   ];
 
   const gisProjects = [
     {
-      title: 'ADA Slope Compliance Tool',
-      description: 'Checks campus paths for ADA slope compliance using DEMs.',
-      tech: 'Python, Rasterio, NumPy, Matplotlib',
-      github: 'https://github.com/synnbad/ada-slope-tool',
-      status: 'completed' as const,
+      title: "ADA Slope Compliance Tool",
+      description: "Checks campus paths for ADA slope compliance using DEMs.",
+      tech: "Python, Rasterio, NumPy, Matplotlib",
+      github: "https://github.com/synnbad/ada-slope-tool",
+      status: "completed" as const,
     },
   ];
 
   const aiProjects = [
     {
-      title: 'AI-Powered Web Accessibility Checker',
-      description: 'Plugin concept to scan and fix accessibility issues using GPT',
-      tech: 'GPT-4, Tesseract, Screenshot APIs',
-      status: 'in-progress' as const,
+      title: "AI-Powered Web Accessibility Checker",
+      description:
+        "Plugin concept to scan and fix accessibility issues using GPT",
+      tech: "GPT-4, Tesseract, Screenshot APIs",
+      status: "in-progress" as const,
     },
   ];
 
   const getProjectsForTab = (tabId: string) => {
     switch (tabId) {
-      case 'tech':
+      case "tech":
         return techProjects;
-      case 'gis':
+      case "gis":
         return gisProjects;
-      case 'ai':
+      case "ai":
         return aiProjects;
       default:
         return techProjects;
@@ -70,7 +72,9 @@ const Projects = () => {
               My Projects
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A collection of tools, applications, and solutions I've built across various domains including tech automation, GIS analysis, and accessibility innovation.
+              A collection of tools, applications, and solutions I've built
+              across various domains including tech automation, GIS analysis,
+              and accessibility innovation.
             </p>
           </div>
 
@@ -82,10 +86,10 @@ const Projects = () => {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={cn(
-                    'px-6 py-3 rounded-lg font-medium transition-all duration-200',
+                    "px-6 py-3 rounded-lg font-medium transition-all duration-200",
                     activeTab === tab.id
-                      ? 'bg-portfolio-primary text-white shadow-sm'
-                      : 'text-gray-600 hover:text-portfolio-primary hover:bg-gray-50'
+                      ? "bg-portfolio-primary text-white shadow-sm"
+                      : "text-gray-600 hover:text-portfolio-primary hover:bg-gray-50",
                   )}
                 >
                   {tab.label}
@@ -116,7 +120,9 @@ const Projects = () => {
                 More Projects Coming Soon
               </h3>
               <p className="text-gray-600 mb-6">
-                I'm always working on new projects and experimenting with the latest technologies. Check back regularly for updates, or connect with me to see what I'm currently building.
+                I'm always working on new projects and experimenting with the
+                latest technologies. Check back regularly for updates, or
+                connect with me to see what I'm currently building.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

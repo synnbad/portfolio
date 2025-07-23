@@ -1,4 +1,4 @@
-import { Github, Linkedin, Download } from 'lucide-react';
+import { Github, Linkedin, Download } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,24 +16,40 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-600 max-w-md">
-              Multidisciplinary technologist bridging code, creativity, and accessibility through cloud computing, automation, and 3D storytelling.
+              Multidisciplinary technologist bridging code, creativity, and
+              accessibility through cloud computing, automation, and 3D
+              storytelling.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-heading font-semibold text-portfolio-dark-text">Quick Links</h3>
+            <h3 className="font-heading font-semibold text-portfolio-dark-text">
+              Quick Links
+            </h3>
             <div className="grid grid-cols-2 gap-2">
-              <a href="/projects" className="text-gray-600 hover:text-portfolio-primary transition-colors">
+              <a
+                href="/projects"
+                className="text-gray-600 hover:text-portfolio-primary transition-colors"
+              >
                 Projects
               </a>
-              <a href="/resume" className="text-gray-600 hover:text-portfolio-primary transition-colors">
+              <a
+                href="/resume"
+                className="text-gray-600 hover:text-portfolio-primary transition-colors"
+              >
                 Resume
               </a>
-              <a href="/certifications" className="text-gray-600 hover:text-portfolio-primary transition-colors">
+              <a
+                href="/certifications"
+                className="text-gray-600 hover:text-portfolio-primary transition-colors"
+              >
                 Certifications
               </a>
-              <a href="/3d-modeling" className="text-gray-600 hover:text-portfolio-primary transition-colors">
+              <a
+                href="/3d-modeling"
+                className="text-gray-600 hover:text-portfolio-primary transition-colors"
+              >
                 3D Modeling
               </a>
             </div>
@@ -41,7 +57,9 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h3 className="font-heading font-semibold text-portfolio-dark-text">Connect</h3>
+            <h3 className="font-heading font-semibold text-portfolio-dark-text">
+              Connect
+            </h3>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/synnbad"
@@ -68,7 +86,17 @@ const Footer = () => {
             </div>
             <div className="text-sm text-gray-500">
               <p>📧 yourname@domain.com</p>
-              <p>🎨 <a href="https://sketchfab.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-portfolio-primary">Sketchfab Portfolio</a></p>
+              <p>
+                🎨{" "}
+                <a
+                  href="https://sketchfab.com/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-portfolio-primary"
+                >
+                  Sketchfab Portfolio
+                </a>
+              </p>
             </div>
           </div>
         </div>
