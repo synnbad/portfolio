@@ -47,10 +47,10 @@ const Footer = () => {
                 Certifications
               </a>
               <a
-                href="/3d-modeling"
+                href="/hobbies"
                 className="text-gray-600 hover:text-portfolio-primary transition-colors"
               >
-                3D Modeling
+                Hobbies
               </a>
             </div>
           </div>
