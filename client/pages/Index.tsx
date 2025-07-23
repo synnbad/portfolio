@@ -69,9 +69,8 @@ function Index() {
               <p className="text-lg text-gray-600 leading-relaxed">
                 I'm a multidisciplinary technologist with a passion for cloud
                 computing, automation, and spatial analysis. Whether I'm building
-                Python-based GIS tools, developing accessible web solutions, or
-                crafting cinematic 3D renders, I aim to design experiences that
-                are as useful as they are beautiful.
+                Python-based GIS tools or developing accessible web solutions, I aim to design experiences that
+                are as useful as they are beautiful. In my free time, I enjoy creating 3D art and renders using Blender.
               </p>
             </div>
 
