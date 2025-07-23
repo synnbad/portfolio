@@ -60,18 +60,32 @@ function Index() {
 
       {/* About Me Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-portfolio-dark-text mb-6">
-              About Me
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              I'm a multidisciplinary technologist with a passion for cloud
-              computing, automation, and spatial analysis. Whether I'm building
-              Python-based GIS tools, developing accessible web solutions, or
-              crafting cinematic 3D renders, I aim to design experiences that
-              are as useful as they are beautiful.
-            </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-portfolio-dark-text mb-6">
+                About Me
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                I'm a multidisciplinary technologist with a passion for cloud
+                computing, automation, and spatial analysis. Whether I'm building
+                Python-based GIS tools, developing accessible web solutions, or
+                crafting cinematic 3D renders, I aim to design experiences that
+                are as useful as they are beautiful.
+              </p>
+            </div>
+
+            {/* About Image Placeholder */}
+            <div className="lg:order-first">
+              <div className="aspect-square bg-gray-200 rounded-2xl flex items-center justify-center">
+                <div className="text-center text-gray-400">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">💼</span>
+                  </div>
+                  <p className="text-sm font-medium">Workspace Image</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
