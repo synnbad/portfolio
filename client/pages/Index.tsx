@@ -159,24 +159,24 @@ function Index() {
             </SectionCard>
 
             <SectionCard
-              title="3D Modeling"
-              description="I create immersive 3D scenes using Blender, blending realism with imagination."
+              title="Accessibility & Innovation"
+              description="I focus on building accessible solutions and exploring emerging technologies to create inclusive digital experiences."
               icon={<Palette className="w-6 h-6 text-white" />}
             >
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">Blender Mastery</span>
+                  <span className="text-sm text-gray-600">Web Accessibility</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
                   <span className="text-sm text-gray-600">
-                    Cinematic Renders
+                    Digital Research
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-600">3D Storytelling</span>
+                  <span className="text-sm text-gray-600">Innovation Solutions</span>
                 </div>
               </div>
             </SectionCard>
