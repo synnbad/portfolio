@@ -10,7 +10,6 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Certifications from "./pages/Certifications";
-import Hobbies from "./pages/Hobbies";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
