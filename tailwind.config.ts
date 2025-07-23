@@ -13,7 +13,20 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'heading': ['Poppins', 'system-ui', 'sans-serif'],
+        'body': ['Inter', 'Open Sans', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        // Portfolio Brand Colors
+        'portfolio': {
+          primary: '#3B82F6',
+          accent: '#F59E0B',
+          background: '#F9FAFB',
+          'dark-text': '#111827',
+          'soft-gray': '#E5E7EB',
+        },
+        // Keep existing design system colors for components
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
