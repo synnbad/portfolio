@@ -7,18 +7,38 @@ const Projects = () => {
   const [activeTab, setActiveTab] = useState("tech");
 
   const tabs = [
-    { id: "tech", label: "🛠️ Tech Projects" },
-    { id: "gis", label: "🌍 GIS / Automation" },
-    { id: "ai", label: "🤖 AI / Accessibility" },
+    { id: "tech", label: "� Tech & Development" },
+    { id: "gis", label: "🌍 GIS & Automation" },
+    { id: "ai", label: "🤖 AI & Accessibility" },
+    { id: "research", label: "🔬 Research & Data" },
   ];
 
   const techProjects = [
+    {
+      title: "FSU DigiNole Batch Ingest Tool",
+      description:
+        "Python-based batch ingest tool for FSU Digital Repository, improving image processing and metadata management for over 10,000 files.",
+      tech: "Python, Digital Repository APIs, Metadata Processing",
+      status: "completed" as const,
+    },
     {
       title: "Omeka Migration Tool",
       description:
         "A desktop UI tool to migrate image and metadata records between Omeka platforms using their APIs.",
       tech: "Python, Tkinter, REST API",
       github: "https://github.com/synnbad/omeka-migration-tool",
+      status: "completed" as const,
+    },
+    {
+      title: "Web-based Exam Results System",
+      description: "University exam results incubation system integrated with existing university infrastructure.",
+      tech: "Web Development, Database Integration, System Integration",
+      status: "completed" as const,
+    },
+    {
+      title: "Android Internship Recruitment App",
+      description: "Capstone project: Android application for internship recruitment in Ghana with user matching and application management.",
+      tech: "Android Development, Java/Kotlin, Database Design",
       status: "completed" as const,
     },
     {
@@ -41,11 +61,42 @@ const Projects = () => {
 
   const aiProjects = [
     {
+      title: "Web Accessibility Training Course",
+      description:
+        "Comprehensive training program for web accessibility, achieving 90% W3C compliance rate among participants.",
+      tech: "WCAG 2.1, WAVE, Axe, WebAIM, Training Development",
+      status: "completed" as const,
+    },
+    {
       title: "AI-Powered Web Accessibility Checker",
       description:
         "Plugin concept to scan and fix accessibility issues using GPT",
       tech: "GPT-4, Tesseract, Screenshot APIs",
       status: "in-progress" as const,
+    },
+    {
+      title: "Data Analysis for HPV Research",
+      description:
+        "Data management and analysis for Bill and Melinda Gates funded research project with international collaboration.",
+      tech: "Python, Data Analysis, RedCap, Statistical Analysis",
+      status: "completed" as const,
+    },
+  ];
+
+  const researchProjects = [
+    {
+      title: "Globe HPV Research Data Management",
+      description:
+        "Managed database and data collection protocols for Bill and Melinda Gates funded international research project.",
+      tech: "Data Management, RedCap, Statistical Analysis, International Collaboration",
+      status: "completed" as const,
+    },
+    {
+      title: "University System Integration",
+      description:
+        "Integrated web-based exam results system with existing university infrastructure, serving thousands of students.",
+      tech: "System Integration, Database Design, Web Development, Scalability",
+      status: "completed" as const,
     },
   ];
 
@@ -57,6 +108,8 @@ const Projects = () => {
         return gisProjects;
       case "ai":
         return aiProjects;
+      case "research":
+        return researchProjects;
       default:
         return techProjects;
     }
@@ -65,17 +118,33 @@ const Projects = () => {
   return (
     <Layout>
       <div className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-portfolio-dark-text mb-6">
+          <div className="text-center mb-20">
+            <h1 className="text-5xl md:text-6xl font-heading font-bold text-portfolio-dark-text mb-8">
               My Projects
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A collection of tools, applications, and solutions I've built
-              across various domains including tech automation, GIS analysis,
-              and accessibility innovation.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              A comprehensive showcase of tools, applications, and solutions I've built
+              across various domains including software development, GIS analysis,
+              accessibility innovation, and research data management.
             </p>
+            
+            {/* Project Stats */}
+            <div className="flex justify-center gap-8 mt-12">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-portfolio-primary">15+</div>
+                <div className="text-sm text-gray-600">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-portfolio-primary">4</div>
+                <div className="text-sm text-gray-600">Domains Covered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-portfolio-primary">10K+</div>
+                <div className="text-sm text-gray-600">Users Impacted</div>
+              </div>
+            </div>
           </div>
 
           {/* Tab Navigation */}
@@ -106,8 +175,8 @@ const Projects = () => {
                 title={project.title}
                 description={project.description}
                 tech={project.tech}
-                github={project.github}
-                link={project.link}
+                github={(project as any).github}
+                link={(project as any).link}
                 status={project.status}
               />
             ))}

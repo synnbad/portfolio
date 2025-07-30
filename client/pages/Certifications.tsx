@@ -6,7 +6,7 @@ const Certifications = () => {
     {
       title: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      date: "2024",
+      date: "2025",
       badgeUrl: "#",
       credlyUrl: "https://www.credly.com/users/your-profile",
       description:
@@ -16,7 +16,7 @@ const Certifications = () => {
     {
       title: "Google IT Automation with Python",
       issuer: "Google (Coursera)",
-      date: "2023",
+      date: "2025",
       badgeUrl: "#",
       credlyUrl: "https://www.credly.com/users/your-profile",
       description:
@@ -27,6 +27,73 @@ const Certifications = () => {
         "Git",
         "Linux",
         "Configuration Management",
+      ],
+    },
+    {
+      title: "Data Analysis with Python",
+      issuer: "FreeCodeCamp",
+      date: "2024",
+      badgeUrl: "#",
+      credlyUrl: "https://www.freecodecamp.org/certification/your-profile",
+      description:
+        "Comprehensive data analysis certification covering pandas, NumPy, matplotlib, and statistical analysis with Python.",
+      skills: [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Data Analysis",
+        "Statistics"
+      ],
+    },
+    {
+      title: "IBM Machine Learning with Python",
+      issuer: "IBM (Coursera)",
+      date: "2024",
+      badgeUrl: "#",
+      credlyUrl: "https://www.credly.com/users/your-profile",
+      description:
+        "Machine learning fundamentals using Python including supervised and unsupervised learning, regression, and classification.",
+      skills: [
+        "Machine Learning",
+        "Python",
+        "Scikit-learn",
+        "Regression",
+        "Classification",
+        "Data Science"
+      ],
+    },
+    {
+      title: "Responsive Web Design",
+      issuer: "FreeCodeCamp",
+      date: "2023",
+      badgeUrl: "#",
+      credlyUrl: "https://www.freecodecamp.org/certification/your-profile",
+      description:
+        "Complete responsive web design certification covering HTML, CSS, flexbox, CSS Grid, and responsive design principles.",
+      skills: [
+        "HTML",
+        "CSS",
+        "Responsive Design",
+        "Flexbox",
+        "CSS Grid",
+        "Web Design"
+      ],
+    },
+    {
+      title: "Python Masterclass",
+      issuer: "Udemy",
+      date: "2021",
+      badgeUrl: "#",
+      credlyUrl: "https://www.udemy.com/certificate/your-certificate",
+      description:
+        "Comprehensive Python programming course covering fundamentals, object-oriented programming, and advanced concepts.",
+      skills: [
+        "Python",
+        "Object-Oriented Programming",
+        "Data Structures",
+        "Algorithms",
+        "Programming Fundamentals"
       ],
     },
   ];
@@ -44,6 +111,21 @@ const Certifications = () => {
         "DynamoDB",
         "API Gateway",
         "CloudFormation",
+      ],
+    },
+    {
+      title: "AI Practitioner",
+      issuer: "Amazon Web Services",
+      expectedDate: "Q1 2025",
+      description:
+        "Comprehensive AI certification covering machine learning fundamentals, AI services, and practical implementation of AI solutions.",
+      skills: [
+        "Machine Learning",
+        "AI Services",
+        "AWS Bedrock",
+        "Natural Language Processing",
+        "Computer Vision",
+        "AI Ethics",
       ],
     },
   ];

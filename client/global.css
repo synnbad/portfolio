@@ -4,6 +4,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Enhanced image rendering for better quality */
+.profile-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  will-change: transform;
+  /* Enhanced sharpening for profile images */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+}
+
+/* High-DPI specific optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .profile-image {
+    image-rendering: -webkit-optimize-contrast;
+    filter: contrast(1.01) saturate(1.02) brightness(1.01);
+  }
+}
+
+/* Ultra high-DPI displays (3x and above) */
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  .profile-image {
+    image-rendering: auto;
+    filter: contrast(1.005) saturate(1.01) brightness(1.005);
+  }
+}
+
 @layer base {
   /**
    * Tailwind CSS theme
