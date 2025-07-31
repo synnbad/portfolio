@@ -4,33 +4,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Enhanced image rendering for better quality */
-.profile-image {
+/* Optimized image rendering for crisp profile photos */
+img.profile-image {
+  /* High-quality rendering */
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  backface-visibility: hidden;
+  image-rendering: optimize-contrast;
+  image-rendering: auto;
+  
+  /* Smooth scaling */
+  object-fit: cover;
+  object-position: center;
+  
+  /* Prevent blurring */
   transform: translateZ(0);
+  backface-visibility: hidden;
+  
+  /* Anti-aliasing */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  will-change: transform;
-  /* Enhanced sharpening for profile images */
-  image-rendering: -moz-crisp-edges;
-  image-rendering: pixelated;
+  
+  /* Ensure crisp edges */
+  border-radius: 50%;
 }
 
-/* High-DPI specific optimizations */
+/* For high-DPI displays, use the best quality */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .profile-image {
+  img.profile-image {
     image-rendering: -webkit-optimize-contrast;
-    filter: contrast(1.01) saturate(1.02) brightness(1.01);
   }
 }
 
-/* Ultra high-DPI displays (3x and above) */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-  .profile-image {
-    image-rendering: auto;
-    filter: contrast(1.005) saturate(1.01) brightness(1.005);
+/* Remove any pixelation artifacts */
+@supports (image-rendering: crisp-edges) {
+  img.profile-image {
+    image-rendering: crisp-edges;
   }
 }
 

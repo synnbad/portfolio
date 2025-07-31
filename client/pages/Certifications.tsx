@@ -4,6 +4,23 @@ import { CheckCircle, Clock, ExternalLink, Award } from "lucide-react";
 const Certifications = () => {
   const completedCertifications = [
     {
+      title: "AWS Certified AI Practitioner",
+      issuer: "Amazon Web Services",
+      date: "January 2025",
+      badgeUrl: "#",
+      credlyUrl: "https://www.credly.com/users/your-profile",
+      description:
+        "Comprehensive AI certification covering machine learning fundamentals, AI services, and practical implementation of AI solutions.",
+      skills: [
+        "Machine Learning",
+        "AI Services",
+        "AWS Bedrock",
+        "Natural Language Processing",
+        "Computer Vision",
+        "AI Ethics",
+      ],
+    },
+    {
       title: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
       date: "2025",
@@ -102,7 +119,7 @@ const Certifications = () => {
     {
       title: "AWS Developer Associate",
       issuer: "Amazon Web Services",
-      expectedDate: "Q2 2024",
+      expectedDate: "Q2 2025",
       description:
         "Advanced AWS certification focusing on developing and maintaining applications on AWS platform.",
       skills: [
@@ -114,34 +131,19 @@ const Certifications = () => {
       ],
     },
     {
-      title: "AI Practitioner",
+      title: "AWS Certified Machine Learning Engineer",
       issuer: "Amazon Web Services",
-      expectedDate: "Q1 2025",
+      expectedDate: "Q3 2025",
       description:
-        "Comprehensive AI certification covering machine learning fundamentals, AI services, and practical implementation of AI solutions.",
+        "Advanced certification focusing on designing, implementing, and maintaining machine learning solutions on AWS.",
       skills: [
-        "Machine Learning",
+        "MLOps",
+        "SageMaker",
+        "Model Deployment",
+        "ML Pipelines",
+        "Amazon Bedrock",
         "AI Services",
-        "AWS Bedrock",
-        "Natural Language Processing",
-        "Computer Vision",
-        "AI Ethics",
       ],
-    },
-  ];
-
-  const plannedCertifications = [
-    {
-      title: "AWS Solutions Architect Associate",
-      issuer: "Amazon Web Services",
-      description:
-        "Designing distributed systems and architectures on AWS platform.",
-    },
-    {
-      title: "Google Cloud Professional Cloud Architect",
-      issuer: "Google Cloud",
-      description:
-        "Designing and planning cloud solution architecture using Google Cloud technologies.",
     },
   ];
 
@@ -156,7 +158,7 @@ const Certifications = () => {
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Continuous learning through industry-recognized certifications
-              that validate my expertise in cloud computing, automation, and
+              that validate my expertise in cloud computing, automation, AI/ML, and
               modern development practices.
             </p>
           </div>
@@ -195,7 +197,7 @@ const Certifications = () => {
 
                   <p className="text-gray-600 mb-4">{cert.description}</p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2">
                     {cert.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
@@ -204,21 +206,6 @@ const Certifications = () => {
                         {skill}
                       </span>
                     ))}
-                  </div>
-
-                  <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
-                    <a
-                      href={cert.credlyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-sm text-portfolio-primary hover:text-blue-600 transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      View Badge
-                    </a>
-                    <div className="w-12 h-8 bg-gray-200 rounded flex items-center justify-center">
-                      <span className="text-xs text-gray-500">Badge</span>
-                    </div>
                   </div>
                 </div>
               ))}
@@ -248,9 +235,6 @@ const Certifications = () => {
                       <p className="text-portfolio-primary font-medium">
                         {cert.issuer}
                       </p>
-                      <p className="text-sm text-portfolio-accent font-medium">
-                        Expected: {cert.expectedDate}
-                      </p>
                     </div>
                     <div className="w-16 h-16 bg-gradient-to-br from-portfolio-accent/20 to-portfolio-accent/30 rounded-lg flex items-center justify-center">
                       <Clock className="w-8 h-8 text-portfolio-accent" />
@@ -274,30 +258,6 @@ const Certifications = () => {
             </div>
           </div>
 
-          {/* Planned Certifications */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-heading font-semibold text-portfolio-dark-text mb-8">
-              Future Learning Goals
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {plannedCertifications.map((cert, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 rounded-xl p-6 border border-gray-200"
-                >
-                  <h3 className="font-heading font-semibold text-lg text-portfolio-dark-text mb-2">
-                    {cert.title}
-                  </h3>
-                  <p className="text-portfolio-primary font-medium mb-2">
-                    {cert.issuer}
-                  </p>
-                  <p className="text-gray-600 text-sm">{cert.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Credly Profile CTA */}
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center">
             <h3 className="text-2xl font-heading font-semibold text-portfolio-dark-text mb-4">
@@ -308,7 +268,7 @@ const Certifications = () => {
               detailed certification information.
             </p>
             <a
-              href="https://www.credly.com/users/your-profile"
+              href="https://www.credly.com/users/sinbad-adjuik.69fe1d0a/edit#credly"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 bg-portfolio-primary text-white rounded-lg hover:bg-blue-600 transition-colors"

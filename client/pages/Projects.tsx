@@ -4,114 +4,93 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("tech");
+  const [activeTab, setActiveTab] = useState("automation");
 
   const tabs = [
-    { id: "tech", label: "� Tech & Development" },
-    { id: "gis", label: "🌍 GIS & Automation" },
-    { id: "ai", label: "🤖 AI & Accessibility" },
-    { id: "research", label: "🔬 Research & Data" },
+    { id: "automation", label: "⚡ Automation & DevOps" },
+    { id: "web", label: "🌐 Web Development" },
+    { id: "ai", label: "🤖 AI & Machine Learning" },
+    { id: "research", label: "📊 Research & Data" },
   ];
 
-  const techProjects = [
+  const automationProjects = [
     {
       title: "FSU DigiNole Batch Ingest Tool",
       description:
-        "Python-based batch ingest tool for FSU Digital Repository, improving image processing and metadata management for over 10,000 files.",
-      tech: "Python, Digital Repository APIs, Metadata Processing",
+        "Python-based automation tool for FSU Digital Repository, processing 10,000+ files with automated metadata management and quality control.",
+      tech: "Python, Digital Repository APIs, Automation, Metadata Processing",
+      github: "https://github.com/synnbad/cetamura_python_script",
       status: "completed" as const,
     },
     {
-      title: "Omeka Migration Tool",
+      title: "ADA Slope Compliance Tool",
       description:
-        "A desktop UI tool to migrate image and metadata records between Omeka platforms using their APIs.",
-      tech: "Python, Tkinter, REST API",
-      github: "https://github.com/synnbad/omeka-migration-tool",
+        "Automated tool for calculating and verifying ADA slope compliance in architectural designs, ensuring accessibility standards are met with precise measurements.",
+      tech: "Python, Automation, Accessibility, Compliance Checking, Mathematical Calculations",
+      github: "https://github.com/synnbad/ADA-Slope-Compliance-Tool",
       status: "completed" as const,
     },
+   
+  ];
+
+  const webProjects = [
     {
       title: "Web-based Exam Results System",
-      description: "University exam results incubation system integrated with existing university infrastructure.",
-      tech: "Web Development, Database Integration, System Integration",
+      description: "Front-end web application for managing and displaying exam results with user authentication and data visualization.",
+      tech: "Web Development, Database Design, System Integration, WCAG 2.1",
+      github: "https://github.com/synnbad/declaration-app",
       status: "completed" as const,
     },
     {
       title: "Android Internship Recruitment App",
       description: "Capstone project: Android application for internship recruitment in Ghana with user matching and application management.",
-      tech: "Android Development, Java/Kotlin, Database Design",
+      tech: "Android Development, Java/Kotlin, Database Design, API Integration",
+      github: "https://github.com/synnbad/Project_App",
       status: "completed" as const,
     },
+  
     {
-      title: "System Health Check",
-      description: "Script to monitor system metrics and send email alerts.",
-      tech: "Python, psutil, Cron",
-      status: "completed" as const,
-    },
-  ];
-
-  const gisProjects = [
-    {
-      title: "ADA Slope Compliance Tool",
-      description: "Checks campus paths for ADA slope compliance using DEMs.",
-      tech: "Python, Rasterio, NumPy, Matplotlib",
-      github: "https://github.com/synnbad/ada-slope-tool",
+      title: "Portfolio Website (This Site)",
+      description: "Professional portfolio built with modern web technologies, optimized for performance and accessibility.",
+      tech: "React, TypeScript, Tailwind CSS, Vite",
       status: "completed" as const,
     },
   ];
 
   const aiProjects = [
     {
-      title: "Web Accessibility Training Course",
+      title: "AI-Powered Accessibility Analyzer",
       description:
-        "Comprehensive training program for web accessibility, achieving 90% W3C compliance rate among participants.",
-      tech: "WCAG 2.1, WAVE, Axe, WebAIM, Training Development",
-      status: "completed" as const,
-    },
-    {
-      title: "AI-Powered Web Accessibility Checker",
-      description:
-        "Plugin concept to scan and fix accessibility issues using GPT",
-      tech: "GPT-4, Tesseract, Screenshot APIs",
+        "Machine learning tool that automatically detects and suggests fixes for web accessibility issues using computer vision and NLP.",
+      tech: "AWS AI Services, Python, Computer Vision, NLP",
       status: "in-progress" as const,
     },
-    {
-      title: "Data Analysis for HPV Research",
-      description:
-        "Data management and analysis for Bill and Melinda Gates funded research project with international collaboration.",
-      tech: "Python, Data Analysis, RedCap, Statistical Analysis",
-      status: "completed" as const,
-    },
+    
   ];
 
   const researchProjects = [
     {
       title: "Globe HPV Research Data Management",
       description:
-        "Managed database and data collection protocols for Bill and Melinda Gates funded international research project.",
+        "Comprehensive data management system for Bill and Melinda Gates funded international research project with advanced analytics.",
       tech: "Data Management, RedCap, Statistical Analysis, International Collaboration",
       status: "completed" as const,
     },
-    {
-      title: "University System Integration",
-      description:
-        "Integrated web-based exam results system with existing university infrastructure, serving thousands of students.",
-      tech: "System Integration, Database Design, Web Development, Scalability",
-      status: "completed" as const,
-    },
+   
   ];
 
   const getProjectsForTab = (tabId: string) => {
     switch (tabId) {
-      case "tech":
-        return techProjects;
-      case "gis":
-        return gisProjects;
+      case "automation":
+        return automationProjects;
+      case "web":
+        return webProjects;
       case "ai":
         return aiProjects;
       case "research":
         return researchProjects;
       default:
-        return techProjects;
+        return automationProjects;
     }
   };
 
@@ -122,28 +101,24 @@ const Projects = () => {
           {/* Header */}
           <div className="text-center mb-20">
             <h1 className="text-5xl md:text-6xl font-heading font-bold text-portfolio-dark-text mb-8">
-              My Projects
+              Project Portfolio
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              A comprehensive showcase of tools, applications, and solutions I've built
-              across various domains including software development, GIS analysis,
-              accessibility innovation, and research data management.
+              Showcasing automation systems, web applications, AI/ML solutions, and research tools 
+              that solve real-world problems and drive measurable impact.
             </p>
             
             {/* Project Stats */}
             <div className="flex justify-center gap-8 mt-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-portfolio-primary">15+</div>
-                <div className="text-sm text-gray-600">Projects Completed</div>
+                <div className="text-3xl font-bold text-portfolio-primary">7</div>
+                <div className="text-sm text-gray-600">Projects</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-portfolio-primary">4</div>
-                <div className="text-sm text-gray-600">Domains Covered</div>
+                <div className="text-sm text-gray-600">Technical Domains</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-portfolio-primary">10K+</div>
-                <div className="text-sm text-gray-600">Users Impacted</div>
-              </div>
+              
             </div>
           </div>
 
@@ -186,12 +161,11 @@ const Projects = () => {
           <div className="mt-16 text-center">
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-heading font-semibold text-portfolio-dark-text mb-4">
-                More Projects Coming Soon
+                Ready to Collaborate
               </h3>
               <p className="text-gray-600 mb-6">
-                I'm always working on new projects and experimenting with the
-                latest technologies. Check back regularly for updates, or
-                connect with me to see what I'm currently building.
+                Interested in working together on automation, web development, or AI/ML projects? 
+                I'm available for collaboration.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -200,7 +174,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-portfolio-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
-                  View All on GitHub
+                  View GitHub Portfolio
                 </a>
                 <a
                   href="/contact"

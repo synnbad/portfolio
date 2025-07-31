@@ -1,4 +1,4 @@
-import { Github, Linkedin, Download, Mail, MapPin, Heart } from "lucide-react";
+import { Github, Linkedin, Download, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,11 +18,6 @@ const Footer = () => {
                 <span className="text-sm text-gray-600">Graduate Research Assistant & IT Professional</span>
               </div>
             </div>
-            <p className="text-gray-600 max-w-md leading-relaxed">
-              Currently building accessible tech at FSU while figuring out why my Python scripts 
-              work perfectly at 2 AM but break mysteriously the next morning. Equal parts curious 
-              researcher and caffeine-dependent developer.
-            </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
@@ -61,12 +56,7 @@ const Footer = () => {
               >
                 → Certifications
               </a>
-              <a
-                href="/3d-modeling"
-                className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
-              >
-                → 3D Portfolio
-              </a>
+              
               <a
                 href="/contact"
                 className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
@@ -117,14 +107,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2 text-gray-600 text-sm">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500 fill-current" />
-              <span>using React, TypeScript & Tailwind CSS</span>
-            </div>
-            <div className="text-gray-600 text-sm">
-              © 2025 Sinbad Asiatewen Adjuik. All rights reserved.
-            </div>
+            
           </div>
         </div>
       </div>
