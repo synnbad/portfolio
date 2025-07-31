@@ -25,16 +25,16 @@ function Index() {
                   <picture className="w-full h-full">
                     <source 
                       media="(min-width: 1024px)" 
-                      srcSet="/profile-picture-ultra.jpg"
+                      srcSet={`${import.meta.env.BASE_URL}profile-picture-ultra.jpg`}
                       type="image/jpeg"
                     />
                     <source 
                       media="(min-width: 640px)" 
-                      srcSet="/profile-picture-hq.jpg"
+                      srcSet={`${import.meta.env.BASE_URL}profile-picture-hq.jpg`}
                       type="image/jpeg"
                     />
                     <img 
-                      src="/profile-picture.jpg"
+                      src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
                       alt="Sinbad Asiatewen Adjuik - Graduate Research Assistant & AI Practitioner"
                       className="w-full h-full object-cover object-center rounded-full"
                       loading="eager"
@@ -70,7 +70,7 @@ function Index() {
                     style={{display: 'none'}}
                   >
                     <img 
-                      src="/profile-picture.jpg"
+                      src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
                       alt="Sinbad Asiatewen Adjuik"
                       className="w-full h-full object-cover object-center rounded-full"
                       style={{
