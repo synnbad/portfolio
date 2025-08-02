@@ -82,7 +82,7 @@ const Footer = () => {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/sinbad-adjuik-3a3086171/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-white shadow-sm hover:shadow-md hover:bg-portfolio-primary hover:text-white transition-all duration-300 border border-gray-100"
