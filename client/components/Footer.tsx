@@ -45,6 +45,12 @@ const Footer = () => {
                 → Projects
               </a>
               <a
+                href="/blog"
+                className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
+              >
+                → Blog & Articles
+              </a>
+              <a
                 href="/resume"
                 className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
               >

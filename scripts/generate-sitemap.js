@@ -7,6 +7,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import matter from 'gray-matter';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +15,8 @@ const __dirname = path.dirname(__filename);
 
 const DOMAIN = 'https://sinbadadjuik.com';
 const currentDate = new Date().toISOString().split('T')[0];
+const PUBLIC_DIR = path.join(__dirname, '../public');
+const BLOG_DIR = path.join(PUBLIC_DIR, 'blog');
 
 // Define your site structure
 const pages = [
@@ -48,6 +51,12 @@ const pages = [
     lastmod: currentDate
   },
   {
+    url: '/#/blog',
+    priority: '0.8',
+    changefreq: 'weekly',
+    lastmod: currentDate
+  },
+  {
     url: '/Sinbad_Adjuik_Resume.pdf',
     priority: '0.6',
     changefreq: 'monthly',
@@ -65,6 +74,7 @@ const generateSitemap = () => {
   
 `;
 
+  // Add static pages
   pages.forEach(page => {
     sitemap += `  <url>
     <loc>${DOMAIN}${page.url}</loc>
@@ -75,6 +85,39 @@ const generateSitemap = () => {
   
 `;
   });
+
+  // Add blog posts
+  if (fs.existsSync(BLOG_DIR)) {
+    const files = fs.readdirSync(BLOG_DIR).filter(file => file.endsWith('.md'));
+    
+    files.forEach(file => {
+      try {
+        const filePath = path.join(BLOG_DIR, file);
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        const { data } = matter(fileContent);
+        const slug = file.replace('.md', '');
+        
+        // Use date from frontmatter or file mtime
+        let lastMod = currentDate;
+        if (data.date) {
+            lastMod = new Date(data.date).toISOString().split('T')[0];
+        } else {
+            lastMod = new Date(fs.statSync(filePath).mtime).toISOString().split('T')[0];
+        }
+        
+        sitemap += `  <url>
+    <loc>${DOMAIN}/#/blog/${slug}</loc>
+    <lastmod>${lastMod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+`;
+      } catch (err) {
+        console.error(`Error processing ${file}:`, err);
+      }
+    });
+  }
 
   sitemap += `</urlset>`;
 

@@ -3,6 +3,10 @@ REM Portfolio Deployment Script for Windows
 
 echo 🚀 Deploying Portfolio to GitHub Pages...
 
+REM Generate Sitemap
+echo 🗺️  Generating sitemap...
+call npm run sitemap
+
 REM Test build locally first
 echo 📦 Testing build...
 call npm run build:client
