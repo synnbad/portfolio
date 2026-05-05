@@ -24,7 +24,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
       )}
     >
       {icon && (
-        <div className="w-12 h-12 bg-gradient-to-br from-portfolio-primary to-portfolio-accent rounded-lg flex items-center justify-center mb-4">
+        <div className="w-12 h-12 bg-portfolio-accent rounded-lg flex items-center justify-center mb-4">
           {icon}
         </div>
       )}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 /* Highlight.js theme for syntax highlighting */
 @import 'highlight.js/styles/github.css';
 
@@ -50,42 +50,40 @@ img.profile-image {
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    /* Portfolio Brand Colors (updated for new design) */
-    --background: 210 20% 98%; /* #F9FAFB */
-    --foreground: 217.2 32.6% 17.5%; /* #111827 */
+    /* Quiet Systems Portfolio */
+    --background: 39 33% 95%; /* #F7F4EF */
+    --foreground: 60 5% 11%; /* #1E1E1B */
 
-    --card: 0 0% 100%;
-    --card-foreground: 217.2 32.6% 17.5%;
+    --card: 40 100% 98%;
+    --card-foreground: 60 5% 11%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 217.2 32.6% 17.5%;
+    --popover: 40 100% 98%;
+    --popover-foreground: 60 5% 11%;
 
-    /* Primary: #3B82F6 (blue) */
-    --primary: 217.2 91.2% 59.8%;
+    /* Muted slate-blue accent: #3F5F73 */
+    --primary: 202 29% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: soft gray tones */
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 217.2 32.6% 17.5%;
+    --secondary: 39 26% 90%;
+    --secondary-foreground: 60 5% 11%;
 
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 38 24% 91%;
+    --muted-foreground: 36 6% 40%;
 
-    /* Accent: #F59E0B (amber/gold) */
-    --accent: 32.1 94.6% 43.7%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 198 24% 93%;
+    --accent-foreground: 202 29% 28%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217.2 91.2% 59.8%;
+    --border: 35 19% 83%;
+    --input: 35 19% 83%;
+    --ring: 202 29% 35%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-background: 39 33% 95%;
+    --sidebar-foreground: 60 5% 18%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
@@ -149,5 +147,31 @@ img.profile-image {
   h5,
   h6 {
     @apply font-heading;
+  }
+
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+
+  a {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2;
+  }
+}
+
+@layer components {
+  .footer-link {
+    @apply rounded-sm text-portfolio-muted transition-colors hover:text-portfolio-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

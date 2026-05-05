@@ -14,17 +14,20 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Poppins", "system-ui", "sans-serif"],
+        heading: ["Inter", "system-ui", "sans-serif"],
         body: ["Inter", "Open Sans", "system-ui", "sans-serif"],
       },
       colors: {
         // Portfolio Brand Colors
         portfolio: {
-          primary: "#3B82F6",
-          accent: "#F59E0B",
-          background: "#F9FAFB",
-          "dark-text": "#111827",
-          "soft-gray": "#E5E7EB",
+          primary: "#3F5F73",
+          accent: "#E7EEF1",
+          background: "#F7F4EF",
+          surface: "#FFFCF7",
+          "dark-text": "#1E1E1B",
+          muted: "#6B665F",
+          border: "#DDD6CB",
+          "soft-gray": "#EAE3D8",
         },
         // Keep existing design system colors for components
         border: "hsl(var(--border))",

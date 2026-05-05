@@ -1,96 +1,194 @@
-﻿import Layout from "@/components/Layout";
+import Layout from "@/components/Layout";
+import ProjectCard from "@/components/ui/project-card";
 import CustomButton from "@/components/ui/custom-button";
-import { Award, Users, Code } from "lucide-react";
+import {
+  contact,
+  experience,
+  featuredProjectTitles,
+  focusAreas,
+  hero,
+  projects,
+  proofRows,
+} from "@/data/portfolio";
 
 function Index() {
+  const featuredProjects = projects.filter((project) =>
+    featuredProjectTitles.includes(project.title),
+  );
+
   return (
     <Layout>
-      {/* Hero Section - Minimal Design */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Main Header */}
-          <header className="space-y-6">
-            <h1 className="text-5xl md:text-7xl font-heading font-bold text-portfolio-dark-text leading-tight">
-              Sinbad Adjuik
-            </h1>
-            <div className="space-y-3">
-              <p className="text-2xl md:text-3xl text-gray-700 font-medium">
-                AWS AI Practitioner & Graduate Research Assistant
+      <section className="px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-muted">
+                {hero.eyebrow}
               </p>
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Specializing in AI/ML applications, automation systems, and accessible web development solutions at Florida State University.
-              </p>
+              <h1 className="mt-5 max-w-4xl font-heading text-4xl font-semibold leading-tight text-portfolio-dark-text sm:text-5xl lg:text-6xl">
+                {hero.headline}
+              </h1>
             </div>
-          </header>
 
-          {/* Credentials - Minimal */}
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-            <span className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-portfolio-primary" />
-              AWS AI Practitioner Certified
-            </span>
-            <span className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-portfolio-primary" />
-              Graduate Research Assistant
-            </span>
-            <span className="flex items-center gap-2">
-              <Code className="w-4 h-4 text-portfolio-primary" />
-              Python & React Developer
-            </span>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <CustomButton 
-              href="/projects" 
-              variant="primary"
-              className="px-6 py-3"
-            >
-              View Projects
-            </CustomButton>
-            <CustomButton 
-              href="/blog" 
-              variant="outline"
-              className="px-6 py-3"
-            >
-              Read Blog
-            </CustomButton>
-            <CustomButton 
-              href="/contact" 
-              variant="secondary"
-              className="px-6 py-3"
-            >
-              Get In Touch
-            </CustomButton>
+            <div>
+              <p className="max-w-2xl text-lg leading-8 text-portfolio-muted">
+                {hero.subheadline}
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <CustomButton href="/projects" size="lg">
+                  View selected work
+                </CustomButton>
+                <CustomButton href="/contact" variant="outline" size="lg">
+                  Contact me
+                </CustomButton>
+                <a
+                  href={contact.resumePath}
+                  download
+                  className="inline-flex items-center justify-center rounded-md bg-portfolio-soft-gray px-6 py-3 text-base font-medium text-portfolio-dark-text transition-colors hover:bg-portfolio-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
+                >
+                  Resume
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-portfolio-primary text-white">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">
-            Let's Build Something Great Together
-          </h2>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Available for consulting, collaboration, and projects in automation, web development, and AI/ML applications.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <CustomButton 
-              href="/projects" 
-              variant="secondary"
-              className="px-8 py-3"
-            >
-              View My Work
-            </CustomButton>
-            <CustomButton 
-              href="/contact" 
-              variant="outline"
-              className="px-8 py-3 border-white text-white hover:bg-white hover:text-portfolio-primary"
-            >
-              Get In Touch
+      <section className="px-4 sm:px-6 lg:px-8" aria-labelledby="proof-heading">
+        <div className="mx-auto max-w-7xl border-y border-portfolio-border py-10">
+          <div className="mb-6 max-w-2xl">
+            <h2 id="proof-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
+              Proof
+            </h2>
+            <p className="mt-3 leading-7 text-portfolio-muted">
+              Selected outcomes from recent work.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b border-portfolio-border text-portfolio-muted">
+                  <th scope="col" className="py-3 pr-6 font-semibold uppercase tracking-[0.16em]">
+                    Area
+                  </th>
+                  <th scope="col" className="py-3 pr-6 font-semibold uppercase tracking-[0.16em]">
+                    Outcome
+                  </th>
+                  <th scope="col" className="py-3 font-semibold uppercase tracking-[0.16em]">
+                    Source
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {proofRows.map((item) => (
+                  <tr key={item.area} className="border-b border-portfolio-border/70 last:border-b-0">
+                    <th scope="row" className="py-4 pr-6 font-semibold text-portfolio-dark-text">
+                      {item.area}
+                    </th>
+                    <td className="py-4 pr-6 leading-6 text-portfolio-muted">{item.outcome}</td>
+                    <td className="py-4 text-portfolio-muted">{item.source}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="selected-work-heading">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <h2 id="selected-work-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
+                Selected work
+              </h2>
+              <p className="mt-3 max-w-2xl leading-7 text-portfolio-muted">
+                Projects that show how I approach automation, data quality, and web systems.
+              </p>
+            </div>
+            <CustomButton href="/projects" variant="outline">
+              View all work
             </CustomButton>
           </div>
+
+          <div className="mt-8">
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-portfolio-surface px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="work-heading">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <h2 id="work-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
+              How I work
+            </h2>
+            <p className="mt-4 leading-7 text-portfolio-muted">
+              I look for repeated steps, missing checks, and handoffs that break under pressure.
+              Then I build the smallest system that makes the work easier to repeat.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {focusAreas.map((area) => (
+              <article key={area.title} className="border-t border-portfolio-border pt-5">
+                <h3 className="font-heading text-xl font-semibold text-portfolio-dark-text">
+                  {area.title}
+                </h3>
+                <p className="mt-3 leading-7 text-portfolio-muted">{area.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="recent-heading">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <h2 id="recent-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
+                Recent experience
+              </h2>
+              <p className="mt-4 leading-7 text-portfolio-muted">
+                Roles where I worked on automation, CMS migration, data quality, and accessibility.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {experience.slice(0, 3).map((item) => (
+                <article key={`${item.role}-${item.dates}`} className="border-t border-portfolio-border pt-5">
+                  <h3 className="font-heading text-xl font-semibold text-portfolio-dark-text">
+                    {item.role}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-portfolio-muted">
+                    {item.organization} / {item.dates}
+                  </p>
+                  <p className="mt-3 leading-7 text-portfolio-muted">{item.summary}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-portfolio-primary px-4 py-12 text-white sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 className="font-heading text-2xl font-semibold">
+              Have a workflow, website, or data problem worth cleaning up?
+            </h2>
+            <p className="mt-3 max-w-3xl text-white/85">
+              I am open to roles, collaborations, and projects involving automation,
+              data quality, accessible web systems, CMS migrations, and practical
+              AI/cloud tooling.
+            </p>
+          </div>
+          <CustomButton href="/contact" variant="secondary" size="lg">
+            Contact me
+          </CustomButton>
         </div>
       </section>
     </Layout>

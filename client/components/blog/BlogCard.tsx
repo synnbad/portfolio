@@ -9,7 +9,7 @@ interface BlogCardProps {
 
 const BlogCard = ({ post }: BlogCardProps) => {
   return (
-    <article className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 overflow-hidden group">
+    <article className="overflow-hidden border-t border-portfolio-border bg-transparent py-6">
       <div className="p-6">
         {/* Tags */}
         {post.tags.length > 0 && (
@@ -17,13 +17,13 @@ const BlogCard = ({ post }: BlogCardProps) => {
             {post.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 bg-portfolio-primary/10 text-portfolio-primary rounded-md text-xs font-medium"
+                className="rounded-md bg-portfolio-accent px-2 py-1 text-xs font-medium text-portfolio-primary"
               >
                 {tag}
               </span>
             ))}
             {post.tags.length > 3 && (
-              <span className="px-2 py-1 bg-gray-100 text-gray-600 rounded-md text-xs">
+              <span className="rounded-md bg-portfolio-soft-gray px-2 py-1 text-xs text-portfolio-muted">
                 +{post.tags.length - 3} more
               </span>
             )}
@@ -31,26 +31,26 @@ const BlogCard = ({ post }: BlogCardProps) => {
         )}
 
         {/* Title */}
-        <h2 className="font-heading text-xl font-semibold text-portfolio-dark-text mb-3 group-hover:text-portfolio-primary transition-colors">
-          <Link to={`/blog/${post.slug}`} className="hover:underline">
+        <h2 className="font-heading text-xl font-semibold text-portfolio-dark-text mb-3">
+          <Link to={`/blog/${post.slug}`} className="rounded-sm hover:text-portfolio-primary hover:underline">
             {post.title}
           </Link>
         </h2>
 
         {/* Description */}
-        <p className="text-gray-600 mb-4 line-clamp-3">
+        <p className="text-portfolio-muted mb-4 line-clamp-3">
           {post.description}
         </p>
 
         {/* Meta info */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4 text-sm text-gray-500">
+          <div className="flex items-center gap-4 text-sm text-portfolio-muted">
             <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-4 h-4" aria-hidden="true" />
               <span>{formatDate(post.date)}</span>
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              <Clock className="w-4 h-4" aria-hidden="true" />
               <span>{post.readingTime} min read</span>
             </div>
           </div>
@@ -58,10 +58,10 @@ const BlogCard = ({ post }: BlogCardProps) => {
           {/* Read more link */}
           <Link
             to={`/blog/${post.slug}`}
-            className="inline-flex items-center gap-1 text-portfolio-primary hover:text-portfolio-primary/80 transition-colors text-sm font-medium group"
+            className="inline-flex items-center gap-1 rounded-sm text-sm font-medium text-portfolio-primary transition-colors hover:text-blue-800"
           >
-            Read more
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            Read note
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>
       </div>

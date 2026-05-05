@@ -21,17 +21,17 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-flex items-center justify-center rounded-md font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
 
   const variants = {
     primary:
-      "bg-portfolio-primary text-white hover:bg-blue-600 focus:ring-portfolio-primary shadow-sm",
+      "bg-portfolio-primary text-white hover:bg-[#314B5B] focus-visible:ring-portfolio-primary",
     secondary:
-      "bg-gray-100 text-portfolio-dark-text hover:bg-gray-200 focus:ring-gray-500",
+      "bg-portfolio-soft-gray text-portfolio-dark-text hover:bg-portfolio-border focus-visible:ring-portfolio-primary",
     accent:
-      "bg-portfolio-accent text-white hover:bg-yellow-500 focus:ring-portfolio-accent shadow-sm",
+      "bg-portfolio-accent text-portfolio-primary hover:bg-[#D8E4E8] focus-visible:ring-portfolio-primary",
     outline:
-      "border-2 border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary hover:text-white focus:ring-portfolio-primary",
+      "border border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary hover:text-white focus-visible:ring-portfolio-primary",
   };
 
   const sizes = {

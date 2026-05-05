@@ -26,10 +26,10 @@ const BlogLayout = ({
         {showBackButton && (
           <Link 
             to="/blog" 
-            className="inline-flex items-center gap-2 text-portfolio-primary hover:text-portfolio-primary/80 transition-colors mb-8 group"
+            className="mb-8 inline-flex items-center gap-2 rounded-sm text-portfolio-primary transition-colors hover:text-[#314B5B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 group"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Back to Blog
+            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" aria-hidden="true" />
+            Back to Notes
           </Link>
         )}
         
@@ -40,29 +40,29 @@ const BlogLayout = ({
             </h1>
             
             {(date || readingTime || tags.length > 0) && (
-              <div className="flex flex-wrap items-center justify-center gap-6 text-gray-600">
+              <div className="flex flex-wrap items-center justify-center gap-6 text-portfolio-muted">
                 {date && (
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
+                    <Calendar className="w-4 h-4" aria-hidden="true" />
                     <span className="text-sm">{formatDate(date)}</span>
                   </div>
                 )}
                 
                 {readingTime && (
                   <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4" aria-hidden="true" />
                     <span className="text-sm">{readingTime} min read</span>
                   </div>
                 )}
                 
                 {tags.length > 0 && (
                   <div className="flex items-center gap-2">
-                    <Tag className="w-4 h-4" />
+                    <Tag className="w-4 h-4" aria-hidden="true" />
                     <div className="flex flex-wrap gap-2">
                       {tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs font-medium"
+                          className="rounded-md bg-portfolio-accent px-2 py-1 text-xs font-medium text-portfolio-primary"
                         >
                           {tag}
                         </span>
@@ -75,9 +75,9 @@ const BlogLayout = ({
           </header>
         )}
         
-        <main className="prose prose-lg prose-gray max-w-none">
+        <article className="prose prose-lg prose-gray max-w-none">
           {children}
-        </main>
+        </article>
       </div>
     </Layout>
   );

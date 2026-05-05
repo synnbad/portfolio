@@ -2,7 +2,7 @@
 
 /**
  * Sitemap Generator for Portfolio Site
- * Automatically generates sitemap.xml with current timestamp
+ * Automatically generates sitemap.xml with current timestamp.
  */
 
 import fs from 'fs';
@@ -18,7 +18,6 @@ const currentDate = new Date().toISOString().split('T')[0];
 const PUBLIC_DIR = path.join(__dirname, '../public');
 const BLOG_DIR = path.join(PUBLIC_DIR, 'blog');
 
-// Define your site structure
 const pages = [
   {
     url: '/',
@@ -33,6 +32,12 @@ const pages = [
     lastmod: currentDate
   },
   {
+    url: '/#/about',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: currentDate
+  },
+  {
     url: '/#/resume',
     priority: '0.8',
     changefreq: 'monthly',
@@ -40,7 +45,7 @@ const pages = [
   },
   {
     url: '/#/certifications',
-    priority: '0.8',
+    priority: '0.7',
     changefreq: 'monthly',
     lastmod: currentDate
   },
@@ -52,8 +57,8 @@ const pages = [
   },
   {
     url: '/#/blog',
-    priority: '0.8',
-    changefreq: 'weekly',
+    priority: '0.5',
+    changefreq: 'monthly',
     lastmod: currentDate
   },
   {
@@ -64,7 +69,6 @@ const pages = [
   }
 ];
 
-// Generate XML sitemap
 const generateSitemap = () => {
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -74,7 +78,6 @@ const generateSitemap = () => {
   
 `;
 
-  // Add static pages
   pages.forEach(page => {
     sitemap += `  <url>
     <loc>${DOMAIN}${page.url}</loc>
@@ -86,7 +89,6 @@ const generateSitemap = () => {
 `;
   });
 
-  // Add blog posts
   if (fs.existsSync(BLOG_DIR)) {
     const files = fs.readdirSync(BLOG_DIR).filter(file => file.endsWith('.md'));
     
@@ -97,19 +99,18 @@ const generateSitemap = () => {
         const { data } = matter(fileContent);
         const slug = file.replace('.md', '');
         
-        // Use date from frontmatter or file mtime
         let lastMod = currentDate;
         if (data.date) {
-            lastMod = new Date(data.date).toISOString().split('T')[0];
+          lastMod = new Date(data.date).toISOString().split('T')[0];
         } else {
-            lastMod = new Date(fs.statSync(filePath).mtime).toISOString().split('T')[0];
+          lastMod = new Date(fs.statSync(filePath).mtime).toISOString().split('T')[0];
         }
         
         sitemap += `  <url>
     <loc>${DOMAIN}/#/blog/${slug}</loc>
     <lastmod>${lastMod}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.4</priority>
   </url>
   
 `;
@@ -124,16 +125,15 @@ const generateSitemap = () => {
   return sitemap;
 };
 
-// Write sitemap to public folder
 const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
 const sitemapContent = generateSitemap();
 
 try {
   fs.writeFileSync(outputPath, sitemapContent, 'utf8');
-  console.log('✅ Sitemap generated successfully!');
-  console.log(`📄 Sitemap saved to: ${outputPath}`);
-  console.log(`🌐 Accessible at: ${DOMAIN}/sitemap.xml`);
+  console.log('Sitemap generated successfully.');
+  console.log(`Sitemap saved to: ${outputPath}`);
+  console.log(`Accessible at: ${DOMAIN}/sitemap.xml`);
 } catch (error) {
-  console.error('❌ Error generating sitemap:', error);
+  console.error('Error generating sitemap:', error);
   process.exit(1);
 }

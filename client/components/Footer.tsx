@@ -1,119 +1,67 @@
-import { Github, Linkedin, Download, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { contact } from "@/data/portfolio";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-gray-50 to-white border-t border-gray-100 mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Brand Section */}
-          <div className="space-y-6 md:col-span-2">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-portfolio-primary to-portfolio-accent rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">SA</span>
-              </div>
-              <div>
-                <span className="font-heading font-bold text-2xl text-portfolio-dark-text block">
-                  Sinbad Adjuik
-                </span>
-                <span className="text-sm text-gray-600">Graduate Research Assistant & IT Professional</span>
-              </div>
-            </div>
-            
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-600">
-                <Mail className="w-4 h-4 text-portfolio-primary" />
-                <span className="text-sm">adjuiksinbad@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-600">
-                <MapPin className="w-4 h-4 text-portfolio-primary" />
-                <span className="text-sm">Tallahassee, FL</span>
-              </div>
-            </div>
-          </div>
+    <footer className="mt-20 border-t border-portfolio-border bg-portfolio-background">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.5fr_1fr_1fr] lg:px-8">
+        <div className="space-y-3">
+          <p className="font-heading text-xl font-semibold text-portfolio-dark-text">
+            Sinbad Adjuik
+          </p>
+          <p className="max-w-xl text-sm leading-6 text-portfolio-muted">
+            Python automation, data checks, and accessible web systems.
+          </p>
+          <p className="text-sm text-portfolio-muted">{contact.location}</p>
+        </div>
 
-          {/* Quick Links */}
-          <div className="space-y-6">
-            <h3 className="font-heading font-semibold text-portfolio-dark-text text-lg">
-              Explore
-            </h3>
-            <div className="space-y-3">
-              <a
-                href="/projects"
-                className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
-              >
-                → Projects
-              </a>
-              <a
-                href="/blog"
-                className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
-              >
-                → Blog & Articles
-              </a>
-              <a
-                href="/resume"
-                className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
-              >
-                → Professional Experience
-              </a>
-              <a
-                href="/certifications"
-                className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
-              >
-                → Certifications
-              </a>
-              
-              <a
-                href="/contact"
-                className="block text-gray-600 hover:text-portfolio-primary transition-colors hover:translate-x-1 transform duration-200"
-              >
-                → Get In Touch
-              </a>
-            </div>
-          </div>
-
-          {/* Social Links & Resources */}
-          <div className="space-y-6">
-            <h3 className="font-heading font-semibold text-portfolio-dark-text text-lg">
-              Connect
-            </h3>
-            <div className="flex flex-col space-y-4">
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/synnbad"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-white shadow-sm hover:shadow-md hover:bg-portfolio-primary hover:text-white transition-all duration-300 border border-gray-100"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/sinbad-adjuik-3a3086171/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-white shadow-sm hover:shadow-md hover:bg-portfolio-primary hover:text-white transition-all duration-300 border border-gray-100"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-              </div>
-              
-              {/* Download Resume */}
-              <a
-                href="/Sinbad_Adjuik_Resume.pdf"
-                download
-                className="inline-flex items-center gap-2 px-4 py-2 bg-portfolio-primary text-white rounded-lg hover:bg-portfolio-primary/90 transition-colors text-sm font-medium"
-              >
-                <Download className="w-4 h-4" />
-                Download Resume
-              </a>
-            </div>
+        <div>
+          <h2 className="text-xs font-semibold uppercase tracking-wide text-portfolio-dark-text">
+            Explore
+          </h2>
+          <div className="mt-4 flex flex-col gap-3 text-sm">
+            <Link className="footer-link" to="/projects">
+              Projects
+            </Link>
+            <Link className="footer-link" to="/about">
+              About
+            </Link>
+            <Link className="footer-link" to="/resume">
+              Resume
+            </Link>
+            <Link className="footer-link" to="/blog">
+              Notes
+            </Link>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-200 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            
+        <div>
+          <h2 className="text-xs font-semibold uppercase tracking-wide text-portfolio-dark-text">
+            Connect
+          </h2>
+          <div className="mt-4 flex flex-col gap-3 text-sm">
+            <a className="footer-link" href={`mailto:${contact.email}`}>
+              {contact.email}
+            </a>
+            <a
+              className="footer-link"
+              href={contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              className="footer-link"
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a className="footer-link" href={contact.resumePath} download>
+              Download resume
+            </a>
           </div>
         </div>
       </div>

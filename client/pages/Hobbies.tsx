@@ -62,8 +62,8 @@ const Hobbies = () => {
               My Hobbies & Interests
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Beyond my professional work, I'm passionate about creative
-              pursuits that fuel my imagination and keep me inspired. Here's
+              Beyond my professional work, I keep a few creative
+              pursuits that fuel my imagination and keep me learning. Here's
               what I love to do in my free time.
             </p>
           </div>
@@ -75,7 +75,7 @@ const Hobbies = () => {
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-portfolio-primary to-portfolio-accent rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-portfolio-accent rounded-lg flex items-center justify-center mb-4">
                   {hobby.icon}
                 </div>
 

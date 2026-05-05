@@ -62,8 +62,9 @@ const Blog = () => {
   if (loading) {
     return (
       <BlogLayout>
-        <div className="flex items-center justify-center min-h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-portfolio-primary"></div>
+        <div className="flex min-h-64 items-center justify-center" role="status" aria-live="polite">
+          <div className="h-12 w-12 animate-spin rounded-full border-b-2 border-portfolio-primary motion-reduce:animate-none"></div>
+          <span className="sr-only">Loading notes</span>
         </div>
       </BlogLayout>
     );
@@ -74,10 +75,10 @@ const Blog = () => {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="font-heading text-4xl md:text-5xl font-bold text-portfolio-dark-text mb-6">
-          Technical Blog
+          Notes
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Insights on AI/ML, automation, web development, and accessibility from my work and research.
+          Short notes on automation, accessibility, cloud tools, and workflow design.
         </p>
       </div>
 
@@ -85,13 +86,17 @@ const Blog = () => {
       <div className="mb-12 space-y-6">
         {/* Search Bar */}
         <div className="relative max-w-md mx-auto">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <label htmlFor="notes-search" className="sr-only">
+            Search notes
+          </label>
+          <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform text-gray-400" aria-hidden="true" />
           <input
+            id="notes-search"
             type="text"
-            placeholder="Search articles..."
+            placeholder="Search notes..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-portfolio-primary focus:border-transparent"
+            className="w-full rounded-md border border-portfolio-border bg-portfolio-surface py-3 pl-10 pr-4 text-portfolio-dark-text focus:border-transparent focus:ring-2 focus:ring-portfolio-primary"
           />
         </div>
 
@@ -99,17 +104,18 @@ const Blog = () => {
         {allTags.length > 0 && (
           <div className="flex flex-wrap justify-center gap-2">
             <span className="flex items-center gap-1 text-sm text-gray-600 mr-2">
-              <Tag className="w-4 h-4" />
+              <Tag className="w-4 h-4" aria-hidden="true" />
               Filter by tag:
             </span>
             {allTags.map((tag) => (
               <button
                 key={tag}
                 onClick={() => handleTagClick(tag)}
+                aria-pressed={selectedTag === tag}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                   selectedTag === tag
                     ? "bg-portfolio-primary text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    : "bg-portfolio-surface text-portfolio-muted hover:bg-portfolio-soft-gray"
                 }`}
               >
                 {tag}
@@ -121,7 +127,7 @@ const Blog = () => {
         {/* Active filters */}
         {(searchTerm || selectedTag) && (
           <div className="text-center text-sm text-gray-600">
-            Showing {filteredPosts.length} of {posts.length} articles
+            Showing {filteredPosts.length} of {posts.length} notes
             {searchTerm && (
               <span className="ml-1">
                 matching "{searchTerm}"
@@ -148,10 +154,10 @@ const Blog = () => {
           {posts.length === 0 ? (
             <div>
               <h3 className="text-xl font-semibold text-gray-700 mb-2">
-                No blog posts yet
+                No notes yet
               </h3>
               <p className="text-gray-600">
-                Stay tuned for upcoming articles on AI, automation, and web development!
+                Notes will appear here once they are verified and ready to support the portfolio.
               </p>
             </div>
           ) : (
