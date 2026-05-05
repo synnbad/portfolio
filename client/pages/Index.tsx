@@ -8,7 +8,6 @@ import {
   focusAreas,
   hero,
   projects,
-  proofRows,
 } from "@/data/portfolio";
 
 function Index() {
@@ -50,48 +49,6 @@ function Index() {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 sm:px-6 lg:px-8" aria-labelledby="proof-heading">
-        <div className="mx-auto max-w-7xl border-y border-portfolio-border py-10">
-          <div className="mb-6 max-w-2xl">
-            <h2 id="proof-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
-              Proof
-            </h2>
-            <p className="mt-3 leading-7 text-portfolio-muted">
-              Selected outcomes from recent work.
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[720px] border-collapse text-left text-sm">
-              <thead>
-                <tr className="border-b border-portfolio-border text-portfolio-muted">
-                  <th scope="col" className="py-3 pr-6 font-semibold uppercase tracking-[0.16em]">
-                    Area
-                  </th>
-                  <th scope="col" className="py-3 pr-6 font-semibold uppercase tracking-[0.16em]">
-                    Outcome
-                  </th>
-                  <th scope="col" className="py-3 font-semibold uppercase tracking-[0.16em]">
-                    Source
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {proofRows.map((item) => (
-                  <tr key={item.area} className="border-b border-portfolio-border/70 last:border-b-0">
-                    <th scope="row" className="py-4 pr-6 font-semibold text-portfolio-dark-text">
-                      {item.area}
-                    </th>
-                    <td className="py-4 pr-6 leading-6 text-portfolio-muted">{item.outcome}</td>
-                    <td className="py-4 text-portfolio-muted">{item.source}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </div>
       </section>

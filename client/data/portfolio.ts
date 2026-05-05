@@ -29,53 +29,6 @@ export const hero = {
     "My work focuses on repository automation, CMS migrations, accessibility review, and data-quality checks.",
 };
 
-export const proofRows = [
-  {
-    area: "Repository automation",
-    outcome: "Helped process 10,000+ digital assets through a repeatable workflow",
-    source: "Resume + GitHub",
-  },
-  {
-    area: "Data migration",
-    outcome: "Migrated 6,000+ records with about 70% less manual effort",
-    source: "Resume",
-  },
-  {
-    area: "Research data",
-    outcome: "Managed 1,000 REDCap records with validation protocols",
-    source: "Resume",
-  },
-  {
-    area: "Accessibility and CMS",
-    outcome:
-      "Supported Drupal migration work with WCAG 2.2 review and audit reporting",
-    source: "Resume",
-  },
-];
-
-export const proofPoints = [
-  {
-    metric: "10,000+",
-    label: "assets automated",
-    detail: "Repository ingest tooling.",
-  },
-  {
-    metric: "6,000+",
-    label: "records migrated",
-    detail: "Omeka migration workflow.",
-  },
-  {
-    metric: "~70%",
-    label: "less manual work",
-    detail: "Structured batch checks.",
-  },
-  {
-    metric: "1,000",
-    label: "records managed",
-    detail: "REDCap data work.",
-  },
-];
-
 export const focusAreas = [
   {
     title: "Automation",
@@ -177,21 +130,6 @@ export const projects: ProjectCaseStudy[] = [
     status: "prototype",
     proves: "I can plan accessibility tooling without overstating prototype impact.",
     github: "https://github.com/synnbad/fixbot-accessibility-scanner-AI-Maker",
-  },
-  {
-    title: "Portfolio Refresh",
-    category: "Web systems",
-    summary:
-      "A cleanup pass that turned a broad portfolio into a clearer systems portfolio.",
-    problem:
-      "The old site spread attention across too many skills and did not make the strongest evidence easy to scan.",
-    built:
-      "Centralized content, revised project summaries, improved navigation/accessibility details, replaced the resume, and updated SEO metadata.",
-    result:
-      "The site now points reviewers toward the strongest evidence instead of every skill and side project.",
-    tools: ["React", "TypeScript", "Tailwind CSS", "Vite", "Accessibility review", "SEO metadata"],
-    status: "case-study",
-    proves: "I can edit systems and content together while keeping claims tied to evidence.",
   },
 ];
 

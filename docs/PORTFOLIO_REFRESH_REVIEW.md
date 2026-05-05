@@ -19,7 +19,7 @@ Python automation, data checks, and accessible web systems.
 ## Current Changes
 
 - Simplified page headings and removed clever labels.
-- Updated the hero, proof section, project cards, About, Contact, Certifications, footer, and SEO copy.
+- Updated the hero, project cards, About, Contact, Certifications, footer, and SEO copy.
 - Kept the design quiet: warm neutral background, charcoal text, muted slate accent, soft borders, and clear spacing.
 - Kept project labels direct: Problem, What I built, Result, What it proves, and Tools.
 - Regenerated the sitemap during the production build.
@@ -51,27 +51,6 @@ View selected work
 Contact me
 Resume
 ```
-
-## Proof
-
-Section heading:
-
-```text
-Proof
-```
-
-Intro:
-
-```text
-Selected outcomes from recent work.
-```
-
-| Area | Outcome | Source |
-| --- | --- | --- |
-| Repository automation | Helped process 10,000+ digital assets through a repeatable workflow | Resume + GitHub |
-| Data migration | Migrated 6,000+ records with about 70% less manual effort | Resume |
-| Research data | Managed 1,000 REDCap records with validation protocols | Resume |
-| Accessibility and CMS | Supported Drupal migration work with WCAG 2.2 review and audit reporting | Resume |
 
 ## Selected Work
 
@@ -147,16 +126,6 @@ Problem: Accessibility reports often explain what failed without making the fix 
 What I built: URL scanning, page evidence, reports, and remediation guidance for WordPress, Drupal, and Umbraco contexts.
 Result: The repo is clearly labeled as a pilot/planning project, with scanner and guidance scope documented.
 What it proves: I can plan accessibility tooling without overstating prototype impact.
-```
-
-### Portfolio Refresh
-
-```text
-Summary: A cleanup pass that turned a broad portfolio into a clearer systems portfolio.
-Problem: The old site spread attention across too many skills and did not make the strongest evidence easy to scan.
-What I built: Centralized content, revised project summaries, improved navigation/accessibility details, replaced the resume, and updated SEO metadata.
-Result: The site now points reviewers toward the strongest evidence instead of every skill and side project.
-What it proves: I can edit systems and content together while keeping claims tied to evidence.
 ```
 
 ## How I Work

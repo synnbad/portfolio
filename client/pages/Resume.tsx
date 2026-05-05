@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import CustomButton from "@/components/ui/custom-button";
-import { certifications, contact, experience, proofPoints, skillGroups } from "@/data/portfolio";
+import { certifications, contact, experience, skillGroups } from "@/data/portfolio";
 
 function Resume() {
   return (
@@ -52,25 +52,6 @@ function Resume() {
             >
               Download resume
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 sm:px-6 lg:px-8" aria-labelledby="resume-proof-heading">
-        <div className="mx-auto max-w-7xl border-y border-portfolio-border py-8">
-          <h2 id="resume-proof-heading" className="sr-only">
-            Resume proof points
-          </h2>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {proofPoints.map((point) => (
-              <div key={point.label}>
-                <p className="font-heading text-3xl font-semibold text-portfolio-dark-text">
-                  {point.metric}
-                </p>
-                <p className="mt-1 font-medium text-portfolio-dark-text">{point.label}</p>
-                <p className="mt-2 text-sm leading-6 text-portfolio-muted">{point.detail}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
