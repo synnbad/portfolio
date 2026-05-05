@@ -21,7 +21,8 @@ Python automation, data checks, and accessible web systems.
 - Simplified page headings and removed clever labels.
 - Updated the hero, project cards, About, Contact, Certifications, footer, and SEO copy.
 - Kept the design quiet: warm neutral background, charcoal text, muted slate accent, soft borders, and clear spacing.
-- Kept project labels direct: Problem, What I built, Result, What it proves, and Tools.
+- Kept project labels direct: Problem, What I built, Result, and Tools.
+- Added a Blog section for short notes on pinned GitHub projects.
 - Regenerated the sitemap during the production build.
 
 ## Home
@@ -72,7 +73,6 @@ Project labels:
 Problem
 What I built
 Result
-What it proves
 Tools
 ```
 
@@ -85,7 +85,6 @@ Summary: A desktop tool for validating, packaging, and tracking digital collecti
 Problem: Metadata checks, file preparation, packaging, and duplicate review were too manual to scale cleanly.
 What I built: Built a Python/Tkinter workflow with validation, logging, duplicate checks, packaging steps, and release automation.
 Result: Supported a repeatable process for 10,000+ digital assets.
-What it proves: I can turn manual collection workflows into tools other people can run.
 ```
 
 ### Omeka Card Archive Migration
@@ -95,7 +94,6 @@ Summary: An API-driven migration workflow for moving archive records from Omeka 
 Problem: Manual record handling made it harder to validate metadata, catch duplicates, and keep migration work consistent.
 What I built: Built Python/Tkinter tools using the Omeka API, metadata validation, duplicate checks, and structured batch jobs.
 Result: Migrated 6,000+ records with about 70% less manual work.
-What it proves: I can protect data quality during CMS and repository migrations.
 ```
 
 ### O-Zone Air Quality Platform
@@ -105,7 +103,6 @@ Summary: A prototype that connects live air-quality data with practical user gui
 Problem: Air-quality data is easy to display, but harder to translate into a clear decision for a user.
 What I built: A React/FastAPI prototype with pollutant calculations, map views, API endpoints, and AI-assisted recommendations.
 Result: The project documents a working cloud prototype with six pollutant calculations and public demo links.
-What it proves: I can connect APIs, cloud pieces, and AI support around a practical decision flow.
 ```
 
 ### Assessment Data Workbench
@@ -115,7 +112,6 @@ Summary: A local-first tool for reviewing, cleaning, and questioning assessment 
 Problem: Survey results, usage exports, comments, and reports can be hard to review consistently.
 What I built: Built a Streamlit workbench for imports, duplicate checks, metadata review, local retrieval, and report drafting.
 Result: Created a privacy-conscious workflow for validating evidence before reporting.
-What it proves: I can build data tools that keep review, privacy, and evidence in the loop.
 ```
 
 ### FixBot Accessibility Scanner
@@ -125,8 +121,30 @@ Summary: A scoped prototype for turning accessibility findings into CMS-aware fi
 Problem: Accessibility reports often explain what failed without making the fix clear in the CMS context.
 What I built: URL scanning, page evidence, reports, and remediation guidance for WordPress, Drupal, and Umbraco contexts.
 Result: The repo is clearly labeled as a pilot/planning project, with scanner and guidance scope documented.
-What it proves: I can plan accessibility tooling without overstating prototype impact.
 ```
+
+## Blog
+
+Heading:
+
+```text
+Blog
+```
+
+Intro:
+
+```text
+Short notes on the GitHub projects I keep pinned: what each repo is for, what I was testing, and how it connects to my work.
+```
+
+Current posts:
+
+- agent-lab
+- repository-batch-ingest
+- assessment-data-workbench
+- o-zone
+- ilpd-liver-disease-project
+- how-to-exit-vim
 
 ## How I Work
 

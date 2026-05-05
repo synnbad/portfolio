@@ -9,7 +9,6 @@ export interface ProjectCaseStudy {
   result: string;
   tools: string[];
   status: ProjectStatus;
-  proves: string;
   github?: string;
   demo?: string;
 }
@@ -65,7 +64,6 @@ export const projects: ProjectCaseStudy[] = [
     result: "Supported a repeatable process for 10,000+ digital assets.",
     tools: ["Python", "Tkinter", "Metadata XML", "GitHub Actions", "PowerShell", "Shell"],
     status: "completed",
-    proves: "I can turn manual collection workflows into tools other people can run.",
     github: "https://github.com/synnbad/cetamura_python_script",
   },
   {
@@ -80,7 +78,6 @@ export const projects: ProjectCaseStudy[] = [
     result: "Migrated 6,000+ records with about 70% less manual work.",
     tools: ["Python", "Tkinter", "Omeka API", "Metadata validation", "Batch jobs"],
     status: "case-study",
-    proves: "I can protect data quality during CMS and repository migrations.",
   },
   {
     title: "O-Zone Air Quality Platform",
@@ -95,7 +92,6 @@ export const projects: ProjectCaseStudy[] = [
       "The project documents a working cloud prototype with six pollutant calculations and public demo links.",
     tools: ["Python", "FastAPI", "React", "TypeScript", "AWS Amplify", "AWS Lambda", "AWS Bedrock"],
     status: "prototype",
-    proves: "I can connect APIs, cloud pieces, and AI support around a practical decision flow.",
     github: "https://github.com/synnbad/O-Zone",
     demo: "https://main.d32w9y2132m03m.amplifyapp.com",
   },
@@ -112,7 +108,6 @@ export const projects: ProjectCaseStudy[] = [
       "Created a privacy-conscious workflow for validating evidence before reporting.",
     tools: ["Python", "Streamlit", "SQLite", "ChromaDB", "Ollama", "Pandas", "NLP"],
     status: "completed",
-    proves: "I can build data tools that keep review, privacy, and evidence in the loop.",
     github: "https://github.com/synnbad/Library-Assessment-Decision-Support-System",
   },
   {
@@ -128,7 +123,6 @@ export const projects: ProjectCaseStudy[] = [
       "The repo is clearly labeled as a pilot/planning project, with scanner and guidance scope documented.",
     tools: ["TypeScript", "Puppeteer", "AWS Bedrock", "React", "WCAG", "CMS workflows"],
     status: "prototype",
-    proves: "I can plan accessibility tooling without overstating prototype impact.",
     github: "https://github.com/synnbad/fixbot-accessibility-scanner-AI-Maker",
   },
 ];

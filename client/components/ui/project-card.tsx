@@ -79,12 +79,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
             </dt>
             <dd className="mt-2 leading-7 text-portfolio-dark-text">{project.result}</dd>
           </div>
-          <div>
-            <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-muted">
-              What it proves
-            </dt>
-            <dd className="mt-2 leading-7 text-portfolio-dark-text">{project.proves}</dd>
-          </div>
           <div className="md:col-span-2">
             <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-muted">
               Tools

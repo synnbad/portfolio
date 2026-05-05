@@ -30,7 +30,7 @@ const Footer = () => {
               Resume
             </Link>
             <Link className="footer-link" to="/blog">
-              Notes
+              Blog
             </Link>
           </div>
         </div>

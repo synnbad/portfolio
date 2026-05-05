@@ -3,7 +3,7 @@ import BlogLayout from "@/components/blog/BlogLayout";
 import BlogCard from "@/components/blog/BlogCard";
 import { BlogService } from "@/lib/blogService";
 import type { BlogListItem } from "@shared/blog";
-import { Search, Tag } from "lucide-react";
+import { Search } from "lucide-react";
 
 const Blog = () => {
   const [posts, setPosts] = useState<BlogListItem[]>([]);
@@ -72,40 +72,36 @@ const Blog = () => {
 
   return (
     <BlogLayout>
-      {/* Hero Section */}
-      <div className="text-center mb-16">
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-portfolio-dark-text mb-6">
-          Notes
+      <div className="mb-16">
+        <h1 className="font-heading text-4xl font-semibold text-portfolio-dark-text md:text-5xl">
+          Blog
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Short notes on automation, accessibility, cloud tools, and workflow design.
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-portfolio-muted">
+          Short notes on the GitHub projects I keep pinned: what each repo is
+          for, what I was testing, and how it connects to my work.
         </p>
       </div>
 
-      {/* Search and Filter */}
       <div className="mb-12 space-y-6">
-        {/* Search Bar */}
-        <div className="relative max-w-md mx-auto">
+        <div className="relative max-w-md">
           <label htmlFor="notes-search" className="sr-only">
-            Search notes
+            Search blog posts
           </label>
-          <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform text-gray-400" aria-hidden="true" />
+          <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform text-portfolio-muted" aria-hidden="true" />
           <input
             id="notes-search"
             type="text"
-            placeholder="Search notes..."
+            placeholder="Search blog posts..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full rounded-md border border-portfolio-border bg-portfolio-surface py-3 pl-10 pr-4 text-portfolio-dark-text focus:border-transparent focus:ring-2 focus:ring-portfolio-primary"
           />
         </div>
 
-        {/* Tag Filter */}
         {allTags.length > 0 && (
-          <div className="flex flex-wrap justify-center gap-2">
-            <span className="flex items-center gap-1 text-sm text-gray-600 mr-2">
-              <Tag className="w-4 h-4" aria-hidden="true" />
-              Filter by tag:
+          <div className="flex flex-wrap gap-2">
+            <span className="mr-2 text-sm text-portfolio-muted">
+              Filter:
             </span>
             {allTags.map((tag) => (
               <button
@@ -124,10 +120,9 @@ const Blog = () => {
           </div>
         )}
 
-        {/* Active filters */}
         {(searchTerm || selectedTag) && (
-          <div className="text-center text-sm text-gray-600">
-            Showing {filteredPosts.length} of {posts.length} notes
+          <div className="text-sm text-portfolio-muted">
+            Showing {filteredPosts.length} of {posts.length} posts
             {searchTerm && (
               <span className="ml-1">
                 matching "{searchTerm}"
@@ -142,7 +137,6 @@ const Blog = () => {
         )}
       </div>
 
-      {/* Blog Posts Grid */}
       {filteredPosts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredPosts.map((post) => (
@@ -154,10 +148,10 @@ const Blog = () => {
           {posts.length === 0 ? (
             <div>
               <h3 className="text-xl font-semibold text-gray-700 mb-2">
-                No notes yet
+                No posts yet
               </h3>
               <p className="text-gray-600">
-                Notes will appear here once they are verified and ready to support the portfolio.
+                Blog posts will appear here once they are ready.
               </p>
             </div>
           ) : (

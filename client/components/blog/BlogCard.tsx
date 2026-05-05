@@ -60,7 +60,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
             to={`/blog/${post.slug}`}
             className="inline-flex items-center gap-1 rounded-sm text-sm font-medium text-portfolio-primary transition-colors hover:text-blue-800"
           >
-            Read note
+            Read post
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>
