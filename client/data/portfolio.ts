@@ -42,7 +42,7 @@ export const proofPoints = [
   {
     value: "70%",
     label: "manual work reduced",
-    detail: "Automation around repeatable repository and CMS handoffs.",
+    detail: "About 70% less manual handling during one Omeka migration workflow.",
   },
 ];
 
@@ -156,7 +156,7 @@ export const projects: ProjectCaseStudy[] = [
     built:
       "URL scanning, page evidence, reports, and remediation guidance for WordPress, Drupal, and Umbraco contexts.",
     result:
-      "The repo is clearly labeled as a pilot/planning project, with scanner and guidance scope documented.",
+      "Documented pilot scope, scanner behavior, and CMS-specific remediation guidance.",
     tools: ["TypeScript", "Puppeteer", "AWS Bedrock", "React", "WCAG", "CMS workflows"],
     status: "prototype",
     github: "https://github.com/synnbad/fixbot-accessibility-scanner-AI-Maker",
@@ -201,7 +201,7 @@ export const experience = [
     summary:
       "Managed REDCap research data and validation protocols for sensitive health records.",
     highlights: [
-      "Maintained the integrity of 1,000 sensitive health records.",
+      "Maintained validation checks for 1,000 sensitive health records.",
       "Supported data ethics, validation protocols, and trustworthy project data.",
     ],
   },

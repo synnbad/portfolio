@@ -45,7 +45,7 @@ function Index() {
                 <a
                   href={contact.resumePath}
                   download
-                  className="inline-flex items-center justify-center rounded-md bg-portfolio-soft-gray px-6 py-3 text-base font-medium text-portfolio-dark-text transition-colors hover:bg-portfolio-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
+                  className="inline-flex items-center rounded-md px-1 py-3 text-sm font-semibold text-portfolio-primary underline-offset-4 transition-colors hover:text-[#314B5B] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
                 >
                   Download resume
                 </a>
@@ -62,9 +62,9 @@ function Index() {
                 <p className="font-heading text-3xl font-semibold text-portfolio-dark-text">
                   {point.value}
                 </p>
-                <h2 className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-portfolio-primary">
+                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-portfolio-primary">
                   {point.label}
-                </h2>
+                </p>
                 <p className="mt-3 text-sm leading-6 text-portfolio-muted">
                   {point.detail}
                 </p>
@@ -82,10 +82,10 @@ function Index() {
                 Proof of work
               </p>
               <h2 id="selected-work-heading" className="mt-3 font-heading text-3xl font-semibold text-portfolio-dark-text">
-                Selected systems, not decorative projects
+                Selected systems with working evidence
               </h2>
               <p className="mt-3 max-w-2xl leading-7 text-portfolio-muted">
-                Work that shows how I reduce manual effort, make messy data safer to handle,
+                Work that shows how I reduce manual effort, make messy data easier to validate and hand off,
                 and turn accessibility checks into maintainable workflows.
               </p>
             </div>

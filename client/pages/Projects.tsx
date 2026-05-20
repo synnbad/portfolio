@@ -2,20 +2,48 @@ import { useMemo, useState } from "react";
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ui/project-card";
 import CustomButton from "@/components/ui/custom-button";
-import { projects, proofPoints } from "@/data/portfolio";
+import { projects, proofPoints, type ProjectCaseStudy } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
-const Projects = () => {
-  const categories = useMemo(
-    () => ["All", ...Array.from(new Set(projects.map((project) => project.category)))],
-    [],
-  );
-  const [activeCategory, setActiveCategory] = useState("All");
+const projectFilters: Array<{
+  id: string;
+  label: string;
+  matches: (project: ProjectCaseStudy) => boolean;
+}> = [
+  {
+    id: "all",
+    label: "All",
+    matches: () => true,
+  },
+  {
+    id: "automation",
+    label: "Automation",
+    matches: (project) =>
+      project.category === "Python automation" || project.category === "Repository migration",
+  },
+  {
+    id: "data-quality",
+    label: "Data quality",
+    matches: (project) =>
+      project.category === "Data review" || project.category === "Repository migration",
+  },
+  {
+    id: "web-cms",
+    label: "Web and CMS",
+    matches: (project) =>
+      project.category === "Accessibility prototype" ||
+      project.category === "Repository migration" ||
+      project.category === "Web and cloud prototype",
+  },
+];
 
-  const visibleProjects =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === activeCategory);
+const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const visibleProjects = useMemo(() => {
+    const filter = projectFilters.find((item) => item.id === activeFilter);
+    return filter ? projects.filter(filter.matches) : projects;
+  }, [activeFilter]);
 
   return (
     <Layout>
@@ -54,22 +82,22 @@ const Projects = () => {
             ))}
           </div>
 
-          <div className="mt-10" aria-label="Project filters">
+          <div className="mt-10" role="group" aria-label="Project filters">
             <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
+              {projectFilters.map((filter) => (
                 <button
-                  key={category}
+                  key={filter.id}
                   type="button"
-                  aria-pressed={activeCategory === category}
-                  onClick={() => setActiveCategory(category)}
+                  aria-pressed={activeFilter === filter.id}
+                  onClick={() => setActiveFilter(filter.id)}
                   className={cn(
                     "rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2",
-                    activeCategory === category
+                    activeFilter === filter.id
                       ? "border-portfolio-primary bg-portfolio-primary text-white"
                       : "border-portfolio-border bg-transparent text-portfolio-muted hover:border-portfolio-primary hover:text-portfolio-primary",
                   )}
                 >
-                  {category}
+                  {filter.label}
                 </button>
               ))}
             </div>
@@ -94,7 +122,7 @@ const Projects = () => {
         <div className="mx-auto flex max-w-7xl flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-heading text-2xl font-semibold text-portfolio-dark-text">
-              Want the practical version?
+              Want implementation details?
             </h2>
             <p className="mt-2 max-w-2xl text-portfolio-muted">
               I can talk through the decisions behind these projects: what was automated,

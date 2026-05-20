@@ -66,6 +66,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
         </div>
 
         <dl className="grid gap-5 md:grid-cols-2">
+          <div className="rounded-md border border-portfolio-border bg-portfolio-background p-4 md:col-span-2">
+            <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-primary">
+              Result
+            </dt>
+            <dd className="mt-2 font-medium leading-7 text-portfolio-dark-text">
+              {project.result}
+            </dd>
+          </div>
           <div className="border-t border-portfolio-border pt-4">
             <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-muted">
               Problem
@@ -77,12 +85,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
               What I built
             </dt>
             <dd className="mt-2 leading-7 text-portfolio-dark-text">{project.built}</dd>
-          </div>
-          <div className="border-t border-portfolio-border pt-4">
-            <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-muted">
-              Result
-            </dt>
-            <dd className="mt-2 leading-7 text-portfolio-dark-text">{project.result}</dd>
           </div>
           <div className="border-t border-portfolio-border pt-4 md:col-span-2">
             <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-muted">
