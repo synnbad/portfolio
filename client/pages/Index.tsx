@@ -7,7 +7,9 @@ import {
   featuredProjectTitles,
   focusAreas,
   hero,
+  operatingPrinciples,
   projects,
+  proofPoints,
 } from "@/data/portfolio";
 
 function Index() {
@@ -17,20 +19,20 @@ function Index() {
 
   return (
     <Layout>
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="px-4 pb-16 pt-20 sm:px-6 sm:pt-24 lg:px-8 lg:pb-20">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-muted">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-portfolio-muted">
                 {hero.eyebrow}
               </p>
-              <h1 className="mt-5 max-w-4xl font-heading text-4xl font-semibold leading-tight text-portfolio-dark-text sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 max-w-4xl font-heading text-4xl font-semibold leading-[1.05] text-portfolio-dark-text sm:text-5xl lg:text-6xl">
                 {hero.headline}
               </h1>
             </div>
 
-            <div>
-              <p className="max-w-2xl text-lg leading-8 text-portfolio-muted">
+            <div className="lg:pb-2">
+              <p className="max-w-2xl text-lg leading-8 text-portfolio-muted sm:text-xl sm:leading-9">
                 {hero.subheadline}
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -38,17 +40,36 @@ function Index() {
                   View selected work
                 </CustomButton>
                 <CustomButton href="/contact" variant="outline" size="lg">
-                  Contact me
+                  Start a conversation
                 </CustomButton>
                 <a
                   href={contact.resumePath}
                   download
                   className="inline-flex items-center justify-center rounded-md bg-portfolio-soft-gray px-6 py-3 text-base font-medium text-portfolio-dark-text transition-colors hover:bg-portfolio-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
                 >
-                  Resume
+                  Download resume
                 </a>
               </div>
             </div>
+          </div>
+
+          <div className="mt-14 grid border-y border-portfolio-border md:grid-cols-3">
+            {proofPoints.map((point) => (
+              <article
+                key={point.label}
+                className="border-b border-portfolio-border py-7 last:border-b-0 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+              >
+                <p className="font-heading text-3xl font-semibold text-portfolio-dark-text">
+                  {point.value}
+                </p>
+                <h2 className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-portfolio-primary">
+                  {point.label}
+                </h2>
+                <p className="mt-3 text-sm leading-6 text-portfolio-muted">
+                  {point.detail}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -57,11 +78,15 @@ function Index() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <h2 id="selected-work-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
-                Selected work
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-muted">
+                Proof of work
+              </p>
+              <h2 id="selected-work-heading" className="mt-3 font-heading text-3xl font-semibold text-portfolio-dark-text">
+                Selected systems, not decorative projects
               </h2>
               <p className="mt-3 max-w-2xl leading-7 text-portfolio-muted">
-                Projects that show how I approach automation, data quality, and web systems.
+                Work that shows how I reduce manual effort, make messy data safer to handle,
+                and turn accessibility checks into maintainable workflows.
               </p>
             </div>
             <CustomButton href="/projects" variant="outline">
@@ -69,7 +94,7 @@ function Index() {
             </CustomButton>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 space-y-6">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
@@ -80,7 +105,10 @@ function Index() {
       <section className="bg-portfolio-surface px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="work-heading">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <h2 id="work-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-muted">
+              Operating style
+            </p>
+            <h2 id="work-heading" className="mt-3 font-heading text-3xl font-semibold text-portfolio-dark-text">
               How I work
             </h2>
             <p className="mt-4 leading-7 text-portfolio-muted">
@@ -102,11 +130,42 @@ function Index() {
         </div>
       </section>
 
+      <section className="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="principles-heading">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-muted">
+              Quality bar
+            </p>
+            <h2 id="principles-heading" className="mt-3 font-heading text-3xl font-semibold text-portfolio-dark-text">
+              The standard I build against
+            </h2>
+          </div>
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {operatingPrinciples.map((principle) => (
+              <article
+                key={principle.title}
+                className="rounded-lg border border-portfolio-border bg-portfolio-surface p-6"
+              >
+                <h3 className="font-heading text-xl font-semibold text-portfolio-dark-text">
+                  {principle.title}
+                </h3>
+                <p className="mt-3 leading-7 text-portfolio-muted">
+                  {principle.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="recent-heading">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <h2 id="recent-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-muted">
+                Experience
+              </p>
+              <h2 id="recent-heading" className="mt-3 font-heading text-3xl font-semibold text-portfolio-dark-text">
                 Recent experience
               </h2>
               <p className="mt-4 leading-7 text-portfolio-muted">
