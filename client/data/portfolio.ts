@@ -23,10 +23,46 @@ export const contact = {
 
 export const hero = {
   eyebrow: "Python automation, data checks, and accessible web systems.",
-  headline: "I build tools that make messy workflows easier to run and maintain.",
+  headline: "I turn messy operational workflows into reliable systems people can actually use.",
   subheadline:
-    "My work focuses on repository automation, CMS migrations, accessibility review, and data-quality checks.",
+    "I build practical tools for repository automation, CMS migrations, accessibility review, and data-quality checks across higher-ed and research environments.",
 };
+
+export const proofPoints = [
+  {
+    value: "10,000+",
+    label: "digital assets supported",
+    detail: "Batch ingest, validation, packaging, and release workflows for digital collections.",
+  },
+  {
+    value: "6,000+",
+    label: "records migrated",
+    detail: "API-driven Omeka migration work with metadata checks and duplicate review.",
+  },
+  {
+    value: "70%",
+    label: "manual work reduced",
+    detail: "Automation around repeatable repository and CMS handoffs.",
+  },
+];
+
+export const operatingPrinciples = [
+  {
+    title: "Evidence before polish",
+    description:
+      "I care about clean interfaces, but the system has to prove the work first: inputs, checks, logs, outputs, and handoff notes.",
+  },
+  {
+    title: "Small tools, real leverage",
+    description:
+      "The best solution is usually the smallest workflow that removes repeated manual effort without creating new maintenance debt.",
+  },
+  {
+    title: "Accessibility as infrastructure",
+    description:
+      "Accessible web work is not decoration. It is part of quality control, contributor training, and long-term maintainability.",
+  },
+];
 
 export const focusAreas = [
   {
@@ -223,9 +259,9 @@ export const skillGroups = [
 ];
 
 export const seo = {
-  title: "Sinbad Adjuik | Python Automation, Data Checks & Accessible Web Systems",
+  title: "Sinbad Adjuik | Automation, Data Quality & Accessible Web Systems",
   description:
-    "Portfolio of Sinbad Adjuik, focused on Python automation, data-quality workflows, CMS migration, accessibility review, and practical web systems.",
+    "Portfolio of Sinbad Adjuik, focused on Python automation, data-quality workflows, CMS migration, accessibility review, and practical web systems for higher-ed and research environments.",
   socialDescription:
-    "I build tools that make messy data and web workflows easier to run and maintain.",
+    "I turn messy data and web workflows into reliable systems people can actually use.",
 };
