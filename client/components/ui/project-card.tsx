@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${project.title} GitHub repository`}
-                  className="rounded-sm text-portfolio-primary hover:text-[#314B5B]"
+                  className="rounded-sm text-portfolio-primary hover:text-[#314B5B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
                 >
                   GitHub
                 </a>
@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${project.title} demo`}
-                  className="rounded-sm text-portfolio-primary hover:text-[#314B5B]"
+                  className="rounded-sm text-portfolio-primary hover:text-[#314B5B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
                 >
                   Demo
                 </a>
@@ -66,23 +66,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
         </div>
 
         <dl className="grid gap-5 md:grid-cols-2">
-          <div className="rounded-md border border-portfolio-border bg-portfolio-background p-4 md:col-span-2">
+          <div className="border-t border-portfolio-border pt-4 md:col-span-2">
             <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-primary">
-              Result
+              Why it matters
             </dt>
-            <dd className="mt-2 font-medium leading-7 text-portfolio-dark-text">
+            <dd className="mt-2 leading-7 text-portfolio-dark-text">
               {project.result}
             </dd>
           </div>
           <div className="border-t border-portfolio-border pt-4">
             <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-muted">
-              Problem
+              Context
             </dt>
             <dd className="mt-2 leading-7 text-portfolio-dark-text">{project.problem}</dd>
           </div>
           <div className="border-t border-portfolio-border pt-4">
             <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-muted">
-              What I built
+              What I made
             </dt>
             <dd className="mt-2 leading-7 text-portfolio-dark-text">{project.built}</dd>
           </div>

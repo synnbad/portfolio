@@ -22,47 +22,11 @@ export const contact = {
 };
 
 export const hero = {
-  eyebrow: "Python automation, data checks, and accessible web systems.",
-  headline: "I turn messy operational workflows into reliable systems people can actually use.",
+  eyebrow: "Portfolio, projects, and practice.",
+  headline: "I build practical systems for automation, data quality, and accessible web work.",
   subheadline:
-    "I build practical tools for repository automation, CMS migrations, accessibility review, and data-quality checks across higher-ed and research environments.",
+    "I'm Sinbad Adjuik, a developer who likes turning repetitive, fragile workflows into tools that are easier to run, explain, and maintain.",
 };
-
-export const proofPoints = [
-  {
-    value: "10,000+",
-    label: "digital assets supported",
-    detail: "Batch ingest, validation, packaging, and release workflows for digital collections.",
-  },
-  {
-    value: "6,000+",
-    label: "records migrated",
-    detail: "API-driven Omeka migration work with metadata checks and duplicate review.",
-  },
-  {
-    value: "70%",
-    label: "manual work reduced",
-    detail: "About 70% less manual handling during one Omeka migration workflow.",
-  },
-];
-
-export const operatingPrinciples = [
-  {
-    title: "Evidence before polish",
-    description:
-      "I care about clean interfaces, but the system has to prove the work first: inputs, checks, logs, outputs, and handoff notes.",
-  },
-  {
-    title: "Small tools, real leverage",
-    description:
-      "The best solution is usually the smallest workflow that removes repeated manual effort without creating new maintenance debt.",
-  },
-  {
-    title: "Accessibility as infrastructure",
-    description:
-      "Accessible web work is not decoration. It is part of quality control, contributor training, and long-term maintainability.",
-  },
-];
 
 export const focusAreas = [
   {
@@ -97,7 +61,7 @@ export const projects: ProjectCaseStudy[] = [
       "Metadata checks, file preparation, packaging, and duplicate review were too manual to scale cleanly.",
     built:
       "Built a Python/Tkinter workflow with validation, logging, duplicate checks, packaging steps, and release automation.",
-    result: "Supported a repeatable process for 10,000+ digital assets.",
+    result: "Made digital collection ingest work easier to repeat, review, and hand off.",
     tools: ["Python", "Tkinter", "Metadata XML", "GitHub Actions", "PowerShell", "Shell"],
     status: "completed",
     github: "https://github.com/synnbad/cetamura_python_script",
@@ -111,7 +75,8 @@ export const projects: ProjectCaseStudy[] = [
       "Manual record handling made it harder to validate metadata, catch duplicates, and keep migration work consistent.",
     built:
       "Built Python/Tkinter tools using the Omeka API, metadata validation, duplicate checks, and structured batch jobs.",
-    result: "Migrated 6,000+ records with about 70% less manual work.",
+    result:
+      "Turned record migration into a more consistent batch workflow with validation and duplicate review.",
     tools: ["Python", "Tkinter", "Omeka API", "Metadata validation", "Batch jobs"],
     status: "case-study",
   },
@@ -125,7 +90,7 @@ export const projects: ProjectCaseStudy[] = [
     built:
       "A React/FastAPI prototype with pollutant calculations, map views, API endpoints, and AI-assisted recommendations.",
     result:
-      "The project documents a working cloud prototype with six pollutant calculations and public demo links.",
+      "Documented a working cloud prototype that turns air-quality data into user-facing guidance.",
     tools: ["Python", "FastAPI", "React", "TypeScript", "AWS Amplify", "AWS Lambda", "AWS Bedrock"],
     status: "prototype",
     github: "https://github.com/synnbad/O-Zone",

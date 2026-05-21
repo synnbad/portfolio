@@ -16,11 +16,11 @@ function Resume() {
                 Sinbad Adjuik
               </h1>
               <p className="mt-5 text-lg leading-8 text-portfolio-muted">
-                I build tools and checks for data, CMS, accessibility, and web
-                workflows that have too many manual failure points. My work
-                includes automating 10,000+ asset workflows, supporting 6,000+
-                record migrations, managing sensitive research data, and
-                improving CMS accessibility review.
+                I build practical tools and checks for data, CMS,
+                accessibility, and web workflows with too many manual failure
+                points. My work spans repository automation, research data
+                validation, CMS migration, accessibility review, and
+                contributor-friendly handoffs.
               </p>
               <div className="mt-6 flex flex-wrap gap-4 text-sm text-portfolio-muted">
                 <a className="text-portfolio-primary hover:text-[#314B5B]" href={`mailto:${contact.email}`}>

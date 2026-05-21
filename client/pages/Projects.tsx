@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ui/project-card";
 import CustomButton from "@/components/ui/custom-button";
-import { projects, proofPoints, type ProjectCaseStudy } from "@/data/portfolio";
+import { projects, type ProjectCaseStudy } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
 const projectFilters: Array<{
@@ -52,7 +52,7 @@ const Projects = () => {
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-muted">
-                Project evidence
+                Projects
               </p>
               <h1 className="mt-3 font-heading text-4xl font-semibold leading-tight text-portfolio-dark-text sm:text-5xl">
                 Selected work
@@ -64,22 +64,6 @@ const Projects = () => {
                 accessible web work, CMS workflows, and practical cloud prototypes.
               </p>
             </div>
-          </div>
-
-          <div className="mt-10 grid border-y border-portfolio-border md:grid-cols-3">
-            {proofPoints.map((point) => (
-              <article
-                key={point.label}
-                className="border-b border-portfolio-border py-6 last:border-b-0 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
-              >
-                <p className="font-heading text-2xl font-semibold text-portfolio-dark-text">
-                  {point.value}
-                </p>
-                <p className="mt-1 text-sm font-semibold uppercase tracking-[0.16em] text-portfolio-primary">
-                  {point.label}
-                </p>
-              </article>
-            ))}
           </div>
 
           <div className="mt-10" role="group" aria-label="Project filters">
@@ -108,8 +92,11 @@ const Projects = () => {
       <section className="px-4 pb-16 sm:px-6 lg:px-8" aria-labelledby="selected-work-list-heading">
         <div className="mx-auto max-w-7xl">
           <h2 id="selected-work-list-heading" className="sr-only">
-            Selected work
+            Project list
           </h2>
+          <p className="sr-only" aria-live="polite">
+            Showing {visibleProjects.length} projects.
+          </p>
           <div className="space-y-6">
             {visibleProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
@@ -122,7 +109,7 @@ const Projects = () => {
         <div className="mx-auto flex max-w-7xl flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-heading text-2xl font-semibold text-portfolio-dark-text">
-              Want implementation details?
+              Want to talk through the work?
             </h2>
             <p className="mt-2 max-w-2xl text-portfolio-muted">
               I can talk through the decisions behind these projects: what was automated,
