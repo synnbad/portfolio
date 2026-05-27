@@ -112,8 +112,7 @@ const Projects = () => {
               Want to talk through the work?
             </h2>
             <p className="mt-2 max-w-2xl text-portfolio-muted">
-              Happy to walk through what I automated, what stayed manual,
-              and how each workflow stayed maintainable.
+              I can walk through automation choices and how each workflow stays maintainable.
             </p>
           </div>
           <CustomButton href="/contact" variant="outline">

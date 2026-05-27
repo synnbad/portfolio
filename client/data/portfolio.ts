@@ -61,7 +61,7 @@ export const projects: ProjectCaseStudy[] = [
     summary:
       "A prototype that connects live air-quality data with user guidance.",
     problem:
-      "Air-quality data is easy to display but hard to turn into clear user decisions.",
+      "Air-quality displays rarely give users a clear next step.",
     built:
       "Built a React/FastAPI prototype with pollutant calculations, map views, APIs, and AI-assisted recommendations.",
     result:
@@ -92,7 +92,7 @@ export const projects: ProjectCaseStudy[] = [
     summary:
       "A scoped prototype for turning accessibility findings into CMS-aware fixes.",
     problem:
-      "Accessibility reports often describe failures without clear CMS-specific fixes.",
+      "Accessibility reports need CMS-specific remediation steps.",
     built:
       "Built URL scanning, page evidence reports, and remediation guidance for WordPress, Drupal, and Umbraco.",
     result:
