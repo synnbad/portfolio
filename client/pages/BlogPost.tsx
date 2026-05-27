@@ -90,10 +90,10 @@ const BlogPost = () => {
       <div className="mt-16 pt-8 border-t border-gray-200">
         <div className="border-t border-portfolio-border pt-6 text-center">
           <h3 className="font-heading text-lg font-semibold text-portfolio-dark-text mb-2">
-            Enjoyed this article?
+            Want to talk through this?
           </h3>
           <p className="text-portfolio-muted mb-4">
-            Let's connect and discuss automation, accessibility, cloud workflows,
+            Reach out to discuss automation, accessibility, cloud workflows,
             or data-integrity tooling.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

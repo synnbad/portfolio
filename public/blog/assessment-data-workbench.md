@@ -6,9 +6,9 @@ tags: ["GitHub", "Python", "Data"]
 published: true
 ---
 
-`Library-Assessment-Decision-Support-System` is a Python project built around reviewing, cleaning, and questioning assessment data.
+`Library-Assessment-Decision-Support-System` is a Python project for reviewing, cleaning, and interpreting assessment data.
 
-The project is useful because assessment evidence often arrives in pieces: survey results, usage exports, comments, and reports. A good workflow needs to make those inputs easier to inspect without skipping privacy and review concerns.
+Assessment evidence often arrives in pieces: survey results, usage exports, comments, and reports. This workflow makes those inputs easier to review without dropping privacy checks.
 
 ## What I Focused On
 
@@ -20,6 +20,6 @@ The project is useful because assessment evidence often arrives in pieces: surve
 
 ## What This Project Shows
 
-This repo shows how I think about data tools: the system should help with review and interpretation, but it should not hide the evidence or make claims the data cannot support.
+This repo shows how I approach data tools: support review and interpretation, but do not hide evidence or overstate conclusions.
 
 GitHub: [Library-Assessment-Decision-Support-System](https://github.com/synnbad/Library-Assessment-Decision-Support-System)

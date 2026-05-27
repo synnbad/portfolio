@@ -77,8 +77,8 @@ const Blog = () => {
           Blog
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-portfolio-muted">
-          Short notes on the GitHub projects I keep pinned: what each repo is
-          for, what I was testing, and how it connects to my work.
+          Short notes on pinned GitHub projects: purpose, experiments,
+          and what they show.
         </p>
       </div>
 

@@ -8,7 +8,7 @@ published: true
 
 `ILPD_Liver_Disease_Final_Project` is a data mining and analytics project built around the Indian Liver Patient Dataset.
 
-I keep this pinned because it shows part of my analytics foundation: working with a dataset, exploring features, preparing analysis, and presenting findings in a notebook format. I do not treat it like production software. It is a learning and analysis repo.
+I keep this pinned because it shows part of my analytics foundation: working with datasets, exploring features, preparing analysis, and presenting findings in notebooks. It is a learning and analysis repo, not production software.
 
 ## What I Focused On
 
@@ -19,6 +19,6 @@ I keep this pinned because it shows part of my analytics foundation: working wit
 
 ## What This Project Shows
 
-This repo supports the data side of my portfolio. It is not the strongest systems project, but it shows the background that informs my data-quality and assessment work.
+This repo supports the data side of my portfolio. It is not a systems flagship, but it shows the background behind my data-quality and assessment work.
 
 GitHub: [ILPD_Liver_Disease_Final_Project](https://github.com/synnbad/ILPD_Liver_Disease_Final_Project)

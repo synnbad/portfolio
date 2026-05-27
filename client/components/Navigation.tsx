@@ -37,24 +37,29 @@ const Navigation = () => {
 
   const linkClasses = (path: string) =>
     cn(
-      "rounded-md px-2 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2",
+      "border-b border-transparent px-1 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2",
       location.pathname === path
-        ? "text-portfolio-primary"
-        : "text-portfolio-muted hover:text-portfolio-primary",
+        ? "border-portfolio-primary text-portfolio-primary"
+        : "text-portfolio-muted hover:border-portfolio-border hover:text-portfolio-primary",
     );
 
   return (
     <nav
       aria-label="Primary"
-      className="sticky top-0 z-50 border-b border-portfolio-border bg-portfolio-background/95 backdrop-blur"
+      className="sticky top-0 z-50 border-b border-portfolio-border bg-portfolio-background"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-16 items-center justify-between gap-4">
           <Link
             to="/"
-            className="rounded-md font-heading text-base font-semibold text-portfolio-dark-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
+            className="rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
           >
-            Sinbad Adjuik
+            <span className="block font-heading text-lg font-semibold text-portfolio-dark-text">
+              Sinbad Adjuik
+            </span>
+            <span className="block text-xs font-medium uppercase tracking-[0.16em] text-portfolio-muted">
+              Automation and web systems
+            </span>
           </Link>
 
           <div className="hidden items-center gap-2 md:flex">

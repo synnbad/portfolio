@@ -6,9 +6,9 @@ tags: ["GitHub", "Python", "Automation"]
 published: true
 ---
 
-`cetamura_python_script` is a Python project for preparing ingest packages for a digital repository workflow.
+`cetamura_python_script` is a Python project for preparing ingest packages in a digital repository workflow.
 
-The useful part of this project is not just that it automates steps. It also makes the work easier to review: metadata checks, file preparation, duplicate review, logging, packaging, and release automation all sit closer to the workflow instead of being scattered across manual steps.
+The value is not just automation. It makes work easier to review by keeping metadata checks, file prep, duplicate review, logging, packaging, and releases in one workflow.
 
 ## What I Focused On
 
@@ -19,6 +19,6 @@ The useful part of this project is not just that it automates steps. It also mak
 
 ## What This Project Shows
 
-This is the clearest public example of my Python automation lane. It connects code to real operational work: reduce repeated handling, add checks, and leave behind a process another person can run.
+This is my clearest public Python automation example. It reduces repeated handling, adds checks, and leaves a process someone else can run.
 
 GitHub: [cetamura_python_script](https://github.com/synnbad/cetamura_python_script)

@@ -12,14 +12,14 @@ function Contact() {
               Contact
             </p>
             <h1 className="mt-3 font-heading text-4xl font-semibold leading-tight text-portfolio-dark-text sm:text-5xl">
-              Have a workflow, website, or data problem worth cleaning up?
+              Need help fixing a workflow, website, or data process?
             </h1>
           </div>
 
           <div className="space-y-6 text-lg leading-8 text-portfolio-muted">
             <p>
-              I am open to roles, collaborations, and projects involving automation,
-              data quality, accessible web systems, CMS migrations, and practical
+              Open to roles, collaborations, and projects involving automation,
+              data quality, accessible web systems, CMS migration, and practical
               AI/cloud tooling.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -47,8 +47,7 @@ function Contact() {
               Email
             </h3>
             <p className="mt-3 leading-7 text-portfolio-muted">
-              Best for project discussions, role conversations, and collaboration
-              notes that need context.
+              Best for project and role conversations.
             </p>
             <a className="mt-5 inline-block text-portfolio-primary hover:text-[#314B5B]" href={`mailto:${contact.email}`}>
               {contact.email}
@@ -60,7 +59,7 @@ function Contact() {
               LinkedIn
             </h3>
             <p className="mt-3 leading-7 text-portfolio-muted">
-              Good for professional context, hiring conversations, and updates.
+              Best for hiring context and quick updates.
             </p>
             <a
               className="mt-5 inline-block text-portfolio-primary hover:text-[#314B5B]"
@@ -77,7 +76,7 @@ function Contact() {
               GitHub
             </h3>
             <p className="mt-3 leading-7 text-portfolio-muted">
-              Review public repositories, prototypes, and project documentation.
+              Public repositories, prototypes, and project docs.
             </p>
             <a
               className="mt-5 inline-block text-portfolio-primary hover:text-[#314B5B]"

@@ -16,11 +16,10 @@ function Resume() {
                 Sinbad Adjuik
               </h1>
               <p className="mt-5 text-lg leading-8 text-portfolio-muted">
-                I build practical tools and checks for data, CMS,
-                accessibility, and web workflows with too many manual failure
-                points. My work spans repository automation, research data
-                validation, CMS migration, accessibility review, and
-                contributor-friendly handoffs.
+                I build practical tools and checks for data, CMS, accessibility,
+                and web workflows with too many manual failure points.
+                My work spans repository automation, research data validation,
+                CMS migration, accessibility review, and clear handoffs.
               </p>
               <div className="mt-6 flex flex-wrap gap-4 text-sm text-portfolio-muted">
                 <a className="text-portfolio-primary hover:text-[#314B5B]" href={`mailto:${contact.email}`}>

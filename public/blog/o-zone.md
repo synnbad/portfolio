@@ -8,7 +8,7 @@ published: true
 
 `O-Zone` is an AWS AI Maker Hackathon project focused on air-quality decisions.
 
-The project starts from a practical problem: environmental data can be easy to display but harder to turn into a clear next step for a user. The repo explores how real-time data, pollutant calculations, API design, and AI-assisted recommendations can fit into one workflow.
+The problem: environmental data is easy to display but harder to turn into clear next steps. This repo combines real-time data, pollutant calculations, API design, and AI-assisted recommendations in one workflow.
 
 ## What I Focused On
 
@@ -19,6 +19,6 @@ The project starts from a practical problem: environmental data can be easy to d
 
 ## What This Project Shows
 
-This is the project I point to for practical AI and cloud tooling. The value is in connecting data, APIs, and guidance around a decision a person is trying to make.
+This is my strongest practical AI/cloud example. The value is connecting data, APIs, and guidance around real user decisions.
 
 GitHub: [O-Zone](https://github.com/synnbad/O-Zone)

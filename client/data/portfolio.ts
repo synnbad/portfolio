@@ -22,17 +22,16 @@ export const contact = {
 };
 
 export const hero = {
-  eyebrow: "Portfolio, projects, and practice.",
-  headline: "I build practical systems for automation, data quality, and accessible web work.",
-  subheadline:
-    "I'm Sinbad Adjuik, a developer who likes turning repetitive, fragile workflows into tools that are easier to run, explain, and maintain.",
+  eyebrow: "Portfolio and project notes.",
+  headline: "I build reliable systems for automation, data quality, and accessible web work.",
+  subheadline: "I turn repetitive workflows into tools teams can run, review, and hand off.",
 };
 
 export const focusAreas = [
   {
     title: "Automation",
     description:
-      "Python tools, batch jobs, API checks, logging, and packaging for repeatable work.",
+      "Python tools, batch jobs, API checks, and logging for repeatable work.",
   },
   {
     title: "Data quality",
@@ -42,12 +41,12 @@ export const focusAreas = [
   {
     title: "Accessible web systems",
     description:
-      "WCAG review, CMS cleanup, clearer navigation, link text, and contributor-friendly fixes.",
+      "WCAG review, CMS cleanup, clearer navigation, and contributor-friendly fixes.",
   },
   {
     title: "Practical AI and cloud",
     description:
-      "AI, APIs, and cloud tools used only when they make the workflow easier to understand or maintain.",
+      "AI, API, and cloud tools used only when they improve clarity or maintenance.",
   },
 ];
 
@@ -56,12 +55,12 @@ export const projects: ProjectCaseStudy[] = [
     title: "Repository Batch Ingest",
     category: "Python automation",
     summary:
-      "A desktop tool for validating, packaging, and tracking digital collection ingest work.",
+      "A desktop tool to validate, package, and track digital collection ingest work.",
     problem:
-      "Metadata checks, file preparation, packaging, and duplicate review were too manual to scale cleanly.",
+      "Metadata checks, packaging, and duplicate review were too manual to scale.",
     built:
-      "Built a Python/Tkinter workflow with validation, logging, duplicate checks, packaging steps, and release automation.",
-    result: "Made digital collection ingest work easier to repeat, review, and hand off.",
+      "Built a Python/Tkinter workflow with validation, logs, duplicate checks, packaging, and release automation.",
+    result: "Made ingest work easier to repeat, review, and hand off.",
     tools: ["Python", "Tkinter", "Metadata XML", "GitHub Actions", "PowerShell", "Shell"],
     status: "completed",
     github: "https://github.com/synnbad/cetamura_python_script",
@@ -70,13 +69,13 @@ export const projects: ProjectCaseStudy[] = [
     title: "Omeka Card Archive Migration",
     category: "Repository migration",
     summary:
-      "An API-driven migration workflow for moving archive records from Omeka Classic to Omeka S.",
+      "An API-driven workflow to migrate archive records from Omeka Classic to Omeka S.",
     problem:
-      "Manual record handling made it harder to validate metadata, catch duplicates, and keep migration work consistent.",
+      "Manual record handling made metadata validation and duplicate checks inconsistent.",
     built:
-      "Built Python/Tkinter tools using the Omeka API, metadata validation, duplicate checks, and structured batch jobs.",
+      "Built Python/Tkinter tools using the Omeka API, validation checks, duplicate checks, and batch jobs.",
     result:
-      "Turned record migration into a more consistent batch workflow with validation and duplicate review.",
+      "Turned migration into a consistent batch workflow with validation and duplicate review.",
     tools: ["Python", "Tkinter", "Omeka API", "Metadata validation", "Batch jobs"],
     status: "case-study",
   },
@@ -84,13 +83,13 @@ export const projects: ProjectCaseStudy[] = [
     title: "O-Zone Air Quality Platform",
     category: "Web and cloud prototype",
     summary:
-      "A prototype that connects live air-quality data with practical user guidance.",
+      "A prototype that connects live air-quality data with user guidance.",
     problem:
-      "Air-quality data is easy to display, but harder to translate into a clear decision for a user.",
+      "Air-quality data is easy to display but hard to turn into clear user decisions.",
     built:
-      "A React/FastAPI prototype with pollutant calculations, map views, API endpoints, and AI-assisted recommendations.",
+      "Built a React/FastAPI prototype with pollutant calculations, map views, APIs, and AI-assisted recommendations.",
     result:
-      "Documented a working cloud prototype that turns air-quality data into user-facing guidance.",
+      "Documented a cloud prototype that turns air-quality data into practical guidance.",
     tools: ["Python", "FastAPI", "React", "TypeScript", "AWS Amplify", "AWS Lambda", "AWS Bedrock"],
     status: "prototype",
     github: "https://github.com/synnbad/O-Zone",
@@ -100,11 +99,11 @@ export const projects: ProjectCaseStudy[] = [
     title: "Assessment Data Workbench",
     category: "Data review",
     summary:
-      "A local-first tool for reviewing, cleaning, and questioning assessment data.",
+      "A local-first tool for reviewing, cleaning, and interpreting assessment data.",
     problem:
-      "Survey results, usage exports, comments, and reports can be hard to review consistently.",
+      "Survey results, exports, comments, and reports were hard to review consistently.",
     built:
-      "Built a Streamlit workbench for imports, duplicate checks, metadata review, local retrieval, and report drafting.",
+      "Built a Streamlit workbench for imports, duplicate checks, metadata review, local retrieval, and draft reporting.",
     result:
       "Created a privacy-conscious workflow for validating evidence before reporting.",
     tools: ["Python", "Streamlit", "SQLite", "ChromaDB", "Ollama", "Pandas", "NLP"],
@@ -117,9 +116,9 @@ export const projects: ProjectCaseStudy[] = [
     summary:
       "A scoped prototype for turning accessibility findings into CMS-aware fixes.",
     problem:
-      "Accessibility reports often explain what failed without making the fix clear in the CMS context.",
+      "Accessibility reports often describe failures without clear CMS-specific fixes.",
     built:
-      "URL scanning, page evidence, reports, and remediation guidance for WordPress, Drupal, and Umbraco contexts.",
+      "Built URL scanning, page evidence reports, and remediation guidance for WordPress, Drupal, and Umbraco.",
     result:
       "Documented pilot scope, scanner behavior, and CMS-specific remediation guidance.",
     tools: ["TypeScript", "Puppeteer", "AWS Bedrock", "React", "WCAG", "CMS workflows"],
@@ -140,11 +139,11 @@ export const experience = [
     organization: "National High Magnetic Field Laboratory",
     dates: "Jan 2026 - Apr 2026",
     summary:
-      "Helped move research-site content from Umbraco into Drupal, with WCAG 2.2 review and repeatable audit reporting.",
+      "Moved research-site content from Umbraco to Drupal with WCAG 2.2 review and repeatable audits.",
     highlights: [
-      "Restructured content during CMS migration work.",
+      "Restructured content during migration.",
       "Ran accessibility scans and fixed issues within contributor access.",
-      "Tracked ADA Title II and WCAG 2.2 items for follow-up.",
+      "Tracked ADA Title II and WCAG 2.2 issues for follow-up.",
     ],
   },
   {
@@ -152,7 +151,7 @@ export const experience = [
     organization: "Florida State University, Strozier Library",
     dates: "Aug 2024 - May 2026",
     summary:
-      "Built Python/Tkinter and API workflows for digital collections, metadata checks, duplicate detection, CI/CD, runbooks, and staff handoff.",
+      "Built Python/Tkinter and API workflows for digital collections, metadata checks, duplicate detection, CI/CD, and handoff.",
     highlights: [
       "Automated ingest and metadata processing for 10,000+ assets.",
       "Migrated and batch-ingested 6,000+ records with about 70% less manual work.",
@@ -164,7 +163,7 @@ export const experience = [
     organization: "School of Public Health research project",
     dates: "Oct 2023 - Aug 2024",
     summary:
-      "Managed REDCap research data and validation protocols for sensitive health records.",
+      "Managed REDCap data and validation protocols for sensitive health records.",
     highlights: [
       "Maintained validation checks for 1,000 sensitive health records.",
       "Supported data ethics, validation protocols, and trustworthy project data.",
@@ -175,7 +174,7 @@ export const experience = [
     organization: "School of Public Health",
     dates: "Nov 2022 - Oct 2023",
     summary:
-      "Provided technical support, taught web development tutorials, and created a React prototype for an exam-results workflow.",
+      "Provided technical support, taught web development tutorials, and built a React prototype for exam results.",
     highlights: [
       "Built a React prototype that informed improvements to a live results system.",
       "Led HTML, CSS, JavaScript, and Python tutorials for undergraduate students.",
@@ -226,7 +225,6 @@ export const skillGroups = [
 export const seo = {
   title: "Sinbad Adjuik | Automation, Data Quality & Accessible Web Systems",
   description:
-    "Portfolio of Sinbad Adjuik, focused on Python automation, data-quality workflows, CMS migration, accessibility review, and practical web systems for higher-ed and research environments.",
-  socialDescription:
-    "I turn messy data and web workflows into reliable systems people can actually use.",
+    "Portfolio of Sinbad Adjuik, focused on Python automation, data-quality workflows, CMS migration, accessibility review, and maintainable web systems.",
+  socialDescription: "I turn messy workflows into reliable systems people can use.",
 };

@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
   return (
     <article
       className={cn(
-        "rounded-lg border border-portfolio-border bg-portfolio-surface p-6 shadow-[0_1px_0_rgba(30,30,27,0.04)] sm:p-7",
+        "rounded-sm border border-portfolio-border bg-portfolio-surface/60 p-6 sm:p-7",
         className,
       )}
     >
@@ -95,7 +95,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
                 {project.tools.map((tool) => (
                   <li
                     key={tool}
-                    className="rounded-full bg-portfolio-background px-3 py-1 text-xs font-medium text-portfolio-muted"
+                    className="rounded-sm border border-portfolio-border bg-portfolio-background px-2.5 py-1 text-xs font-medium text-portfolio-muted"
                   >
                     {tool}
                   </li>

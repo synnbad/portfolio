@@ -8,7 +8,7 @@ published: true
 
 `how-to-exit-vim` is a fork, not a portfolio case study.
 
-I keep it pinned because it is a small reminder that tool fluency matters and that developer culture has a sense of humor. It does not represent a major build, a production system, or a metric-backed outcome.
+I keep it pinned as a reminder that tool fluency matters and developer culture has humor. It is not a major build, production system, or metric-backed outcome.
 
 ## What I Take From It
 
@@ -18,6 +18,6 @@ I keep it pinned because it is a small reminder that tool fluency matters and th
 
 ## Why I Am Naming That Clearly
 
-I want the portfolio to stay honest. Some repos are strong proof of systems work. Some are coursework. Some are prototypes. Some are just public notes or forks. Clear labels help reviewers understand what they are looking at.
+I want the portfolio to stay honest. Some repos are systems work, some coursework, some prototypes, and some simple notes or forks. Clear labels help reviewers understand what they are seeing.
 
 GitHub: [how-to-exit-vim](https://github.com/synnbad/how-to-exit-vim)

@@ -18,19 +18,16 @@ const About = () => {
 
           <div className="space-y-6 text-lg leading-8 text-portfolio-muted">
             <p>
-              I work on practical systems that make technical operations easier
-              to run and maintain. That usually means cleaning up repeated
-              steps, adding validation, improving handoffs, or making a web
-              workflow easier for contributors to use.
+              I build practical systems that make technical operations easier
+              to run and maintain.
             </p>
             <p>
-              The work can be a Python tool, an API-driven migration, an
-              accessibility review, a GitHub Actions workflow, or documentation
-              that helps the next person keep the system running.
+              That can mean a Python tool, API migration workflow,
+              accessibility review, CI pipeline, or handoff documentation.
             </p>
             <p>
-              I try to keep the result simple: clearer records, fewer avoidable
-              errors, and systems that hold up after the first handoff.
+              The goal is simple: clearer records, fewer avoidable errors,
+              and systems that hold up after handoff.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <CustomButton href="/projects">View selected work</CustomButton>
@@ -54,7 +51,7 @@ const About = () => {
               </h3>
               <p className="mt-3 leading-7 text-portfolio-muted">
                 Informal steps become checks, logs, docs, and clear failure
-                states another person can follow.
+                states others can follow.
               </p>
             </article>
             <article className="border-t border-portfolio-border pt-5">
@@ -62,8 +59,8 @@ const About = () => {
                 Record quality
               </h3>
               <p className="mt-3 leading-7 text-portfolio-muted">
-                Metadata, duplicates, migrations, and data entry get validation
-                before cleanup becomes the main workflow.
+                Metadata, duplicates, migrations, and data entry get
+                validation before cleanup becomes the default.
               </p>
             </article>
             <article className="border-t border-portfolio-border pt-5">
@@ -71,8 +68,8 @@ const About = () => {
                 Maintenance
               </h3>
               <p className="mt-3 leading-7 text-portfolio-muted">
-                Tools and patterns get source control, packaging, tests where
-                useful, and plain documentation.
+                Tools get source control, packaging, tests where useful,
+                and plain documentation.
               </p>
             </article>
           </div>
@@ -86,9 +83,8 @@ const About = () => {
               Good fit
             </h2>
             <p className="mt-4 leading-7 text-portfolio-muted">
-              I fit best with teams that need help cleaning up data automation,
-              research technology workflows, CMS migrations, accessibility
-              review, small web systems, or data and cloud-adjacent operations.
+              Best fit: teams cleaning up data automation, research workflows,
+              CMS migrations, accessibility review, and small web systems.
             </p>
           </div>
 

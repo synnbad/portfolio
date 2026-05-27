@@ -6,9 +6,9 @@ tags: ["GitHub", "AI", "Workflow"]
 published: true
 ---
 
-`agent-lab` is where I organize reusable agent workflows, instructions, guardrails, and project delivery patterns.
+`agent-lab` is where I organize reusable agent workflows, instructions, guardrails, and delivery patterns.
 
-The repo matters because AI work can get messy quickly. If the prompt, workflow, acceptance criteria, and handoff notes live only in a chat window, the process is hard to repeat. I use this project as a way to treat agent-assisted work more like a system: defined roles, bounded tasks, review steps, and practical outputs.
+AI work gets messy quickly when prompts, criteria, and handoff notes live only in chat. I use this repo to treat agent-assisted work like a system with defined roles, bounded tasks, review steps, and practical outputs.
 
 ## What I Am Testing
 
@@ -19,6 +19,6 @@ The repo matters because AI work can get messy quickly. If the prompt, workflow,
 
 ## Why It Belongs On My GitHub
 
-This project connects directly to the kind of work I want my portfolio to show: practical systems, clearer handoffs, and tools that make repeated technical work easier to maintain.
+This project reflects the work I want to show: practical systems, clearer handoffs, and maintainable repeated workflows.
 
 GitHub: [agent-lab](https://github.com/synnbad/agent-lab)

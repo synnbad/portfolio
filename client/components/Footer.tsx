@@ -12,6 +12,9 @@ const Footer = () => {
           <p className="max-w-xl text-sm leading-6 text-portfolio-muted">
             Python automation, data checks, and accessible web systems.
           </p>
+          <p className="text-xs uppercase tracking-[0.14em] text-portfolio-muted">
+            Built and maintained personally
+          </p>
           <p className="text-sm text-portfolio-muted">{contact.location}</p>
         </div>
 

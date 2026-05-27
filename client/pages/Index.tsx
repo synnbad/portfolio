@@ -38,7 +38,7 @@ function Index() {
                   View selected work
                 </CustomButton>
                 <CustomButton href="/contact" variant="outline" size="lg">
-                  Start a conversation
+                  Contact me
                 </CustomButton>
                 <a
                   href={contact.resumePath}
@@ -65,8 +65,8 @@ function Index() {
                 Selected work
               </h2>
               <p className="mt-3 max-w-2xl leading-7 text-portfolio-muted">
-                A few examples of how I approach automation, data quality,
-                accessible web systems, and handoff-friendly tools.
+                Examples of automation, data quality, accessibility, and
+                handoff-ready tooling.
               </p>
             </div>
             <CustomButton href="/projects" variant="outline">
@@ -92,8 +92,8 @@ function Index() {
               How I work
             </h2>
             <p className="mt-4 leading-7 text-portfolio-muted">
-              I look for repeated steps, missing checks, and handoffs that break under pressure.
-              Then I build the smallest system that makes the work easier to repeat.
+              I find repeated steps, missing checks, and brittle handoffs.
+              Then I build the smallest system that makes the work repeatable.
             </p>
           </div>
 
@@ -121,7 +121,7 @@ function Index() {
                 Recent experience
               </h2>
               <p className="mt-4 leading-7 text-portfolio-muted">
-                Roles where I worked on automation, CMS migration, data quality, and accessibility.
+                Roles focused on automation, CMS migration, data quality, and accessibility.
               </p>
             </div>
 
@@ -146,11 +146,11 @@ function Index() {
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-heading text-2xl font-semibold">
-              Want to talk through a project or role?
+              Want to discuss a project or role?
             </h2>
             <p className="mt-3 max-w-3xl text-white/85">
-              I am open to conversations around automation, data quality,
-              accessible web systems, CMS migrations, and practical AI/cloud tooling.
+              Open to roles and projects in automation, data quality,
+              accessible web systems, CMS migration, and practical AI/cloud tooling.
             </p>
           </div>
           <CustomButton href="/contact" variant="secondary" size="lg">

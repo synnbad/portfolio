@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Source Serif 4", "Georgia", "Times New Roman", "serif"],
         body: ["Inter", "Open Sans", "system-ui", "sans-serif"],
       },
       colors: {

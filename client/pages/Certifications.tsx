@@ -15,8 +15,7 @@ const Certifications = () => {
               Certifications
             </h1>
             <p className="mt-5 text-lg leading-8 text-portfolio-muted">
-              Credentials that support the work, especially cloud, AI, and
-              automation fundamentals.
+              Credentials that support cloud, AI, and automation work.
             </p>
           </div>
         </div>
@@ -45,9 +44,8 @@ const Certifications = () => {
               How they connect
             </h2>
             <p className="mt-3 max-w-3xl leading-7 text-portfolio-muted">
-              The credentials matter because they support practical work:
-              automation habits, cloud literacy, and careful use of AI where it
-              helps a real workflow.
+              These support practical work: automation habits, cloud literacy,
+              and careful AI use in real workflows.
             </p>
             <div className="mt-6">
               <CustomButton href="/projects" variant="outline">

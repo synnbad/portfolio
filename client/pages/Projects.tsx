@@ -60,7 +60,7 @@ const Projects = () => {
             </div>
             <div>
               <p className="text-lg leading-8 text-portfolio-muted">
-                These are systems-focused projects: automation, data checks,
+                Systems-focused projects in automation, data checks,
                 accessible web work, CMS workflows, and practical cloud prototypes.
               </p>
             </div>
@@ -112,8 +112,8 @@ const Projects = () => {
               Want to talk through the work?
             </h2>
             <p className="mt-2 max-w-2xl text-portfolio-muted">
-              I can talk through the decisions behind these projects: what was automated,
-              what stayed manual, and how I kept the workflow maintainable.
+              Happy to walk through what I automated, what stayed manual,
+              and how each workflow stayed maintainable.
             </p>
           </div>
           <CustomButton href="/contact" variant="outline">
