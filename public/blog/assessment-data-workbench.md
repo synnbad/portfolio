@@ -44,6 +44,6 @@ Stack: Python, Streamlit, SQLite, ChromaDB, Ollama, Pandas, NLP.
 
 ## Impact
 
-The workbench turned fragmented assessment inputs into a repeatable local process: import, validate, review, question, then draft. That is the outcome I care about — not a demo for its own sake, but a tool another person can run when assessment season starts again.
+The workbench turned fragmented assessment inputs into a repeatable local process: import, validate, review, question, then draft.
 
 GitHub: [Library-Assessment-Decision-Support-System](https://github.com/synnbad/Library-Assessment-Decision-Support-System)

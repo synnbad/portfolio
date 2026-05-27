@@ -8,7 +8,7 @@ published: true
 
 Most AI-assisted work fails the second time you need it. The prompt worked once, but the steps, safety checks, and handoff notes stayed in a chat window. The next person cannot run it the same way.
 
-I built [agent-lab](https://github.com/synnbad/agent-lab) to fix that. It is a Markdown-based operating system for reusable agents, skills, workflows, prompts, guardrails, and delivery patterns—not a web app, but a structured repo you can version, review, and improve.
+I built [agent-lab](https://github.com/synnbad/agent-lab) to fix that. It is a Markdown-based operating system for reusable agents, skills, workflows, prompts, and guardrails—a structured repo you can version, review, and improve.
 
 ## The problem
 
@@ -20,7 +20,7 @@ When agent work is informal:
 - handoffs break because context lives in one session
 - it is hard to audit what the agent was allowed to do
 
-I wanted agent-assisted delivery to behave more like operations: defined scope, explicit gates, and artifacts another person can inspect.
+I wanted agent-assisted delivery to behave more like operations: defined scope, guardrails, and artifacts another person can inspect.
 
 ## What I built
 
@@ -49,7 +49,7 @@ Recent work in the repo also defines a **controlled autonomy** path: observe, dr
 
 ## Impact
 
-agent-lab turned scattered prompts into a maintainable system. The outcome is not “more AI usage.” It is **more reliable AI usage**: same steps, same checks, same artifact shape, easier review.
+I use agent-lab daily to perform repetitive tasks.
 
 That is the same principle behind my automation and data-quality projects—make repeated work easier to run, explain, and hand off. agent-lab applies it to agent-assisted delivery itself.
 
