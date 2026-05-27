@@ -12,6 +12,7 @@ const Blog = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [allTags, setAllTags] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadBlogData = async () => {
@@ -24,8 +25,12 @@ const Blog = () => {
         setPosts(blogPosts);
         setFilteredPosts(blogPosts);
         setAllTags(tags);
+        if (blogPosts.length === 0) {
+          setLoadError("No published posts were found. Check that blog markdown files are deployed.");
+        }
       } catch (error) {
         console.error("Error loading blog data:", error);
+        setLoadError("Blog posts could not be loaded.");
       } finally {
         setLoading(false);
       }
@@ -72,6 +77,12 @@ const Blog = () => {
 
   return (
     <BlogLayout>
+      {loadError && (
+        <p className="mb-6 rounded-sm border border-portfolio-border bg-portfolio-surface px-4 py-3 text-sm text-portfolio-muted">
+          {loadError}
+        </p>
+      )}
+
       <div className="mb-16">
         <h1 className="font-heading text-4xl font-semibold text-portfolio-dark-text md:text-5xl">
           Blog

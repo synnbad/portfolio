@@ -35,12 +35,8 @@ export class BlogService {
       // In a real implementation, you'd have an index file or API endpoint
       // For now, we'll try to fetch a few known posts
       const knownSlugs = [
-        'agent-lab',
-        'repository-batch-ingest',
         'assessment-data-workbench',
-        'o-zone',
-        'ilpd-liver-disease-project',
-        'how-to-exit-vim'
+        'agent-lab',
       ];
       
       const posts: BlogListItem[] = [];

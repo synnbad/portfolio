@@ -1,6 +1,5 @@
 import { marked } from 'marked';
 import hljs from 'highlight.js';
-import matter from 'gray-matter';
 import type { BlogPost, BlogPostFrontmatter, BlogListItem } from '@shared/blog';
 
 // Custom renderer with syntax highlighting
@@ -25,6 +24,85 @@ marked.setOptions({
   gfm: true,
 });
 
+function parseFrontmatter(markdownContent: string): {
+  data: BlogPostFrontmatter;
+  content: string;
+} {
+  if (!markdownContent.startsWith('---')) {
+    return {
+      data: {
+        title: '',
+        date: '',
+        description: '',
+        tags: [],
+      },
+      content: markdownContent,
+    };
+  }
+
+  const endIndex = markdownContent.indexOf('---', 3);
+  if (endIndex === -1) {
+    return {
+      data: {
+        title: '',
+        date: '',
+        description: '',
+        tags: [],
+      },
+      content: markdownContent,
+    };
+  }
+
+  const yamlBlock = markdownContent.slice(3, endIndex).trim();
+  const content = markdownContent.slice(endIndex + 3).trim();
+
+  const data: Partial<BlogPostFrontmatter> = { tags: [] };
+
+  for (const line of yamlBlock.split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+
+    const tagsMatch = trimmed.match(/^tags:\s*\[(.*)\]\s*$/);
+    if (tagsMatch) {
+      data.tags = tagsMatch[1]
+        .split(',')
+        .map((tag) => tag.trim().replace(/^["']|["']$/g, ''))
+        .filter(Boolean);
+      continue;
+    }
+
+    const keyValue = trimmed.match(/^([\w-]+):\s*(.+)$/);
+    if (!keyValue) continue;
+
+    const [, key, rawValue] = keyValue;
+    let value: string | boolean = rawValue.trim();
+
+    if (value === 'true') {
+      value = true;
+    } else if (value === 'false') {
+      value = false;
+    } else if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    (data as Record<string, unknown>)[key] = value;
+  }
+
+  return {
+    data: {
+      title: data.title ?? '',
+      date: data.date ?? '',
+      description: data.description ?? '',
+      tags: data.tags ?? [],
+      published: data.published,
+    },
+    content,
+  };
+}
+
 // Calculate reading time (average 200 words per minute)
 function calculateReadingTime(content: string): number {
   const wordsPerMinute = 200;
@@ -32,28 +110,27 @@ function calculateReadingTime(content: string): number {
   return Math.ceil(wordCount / wordsPerMinute);
 }
 
-// Parse markdown content with frontmatter
+// Parse markdown content with frontmatter (no gray-matter — safe in browser builds)
 export async function parseMarkdown(
   markdownContent: string,
   slug: string,
 ): Promise<BlogPost | null> {
-  const { data, content } = matter(markdownContent);
-  const frontmatter = data as BlogPostFrontmatter;
+  const { data, content } = parseFrontmatter(markdownContent);
+  const frontmatter = data;
 
   if (frontmatter.published === false) {
     return null;
   }
 
-  // Convert markdown to HTML
-  const htmlContent = await marked(content);
-  
+  const htmlContent = await marked.parse(content);
+
   return {
     slug,
     title: frontmatter.title,
     date: frontmatter.date,
     description: frontmatter.description,
     tags: frontmatter.tags || [],
-    content: htmlContent as string,
+    content: htmlContent,
     readingTime: calculateReadingTime(content),
   };
 }
