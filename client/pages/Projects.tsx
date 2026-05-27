@@ -77,7 +77,7 @@ const Projects = () => {
                   className={cn(
                     "rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2",
                     activeFilter === filter.id
-                      ? "border-portfolio-primary bg-portfolio-primary text-white"
+                      ? "border-portfolio-primary bg-portfolio-primary text-portfolio-background"
                       : "border-portfolio-border bg-transparent text-portfolio-muted hover:border-portfolio-primary hover:text-portfolio-primary",
                   )}
                 >

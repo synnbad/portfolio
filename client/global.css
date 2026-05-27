@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap");
-/* Highlight.js theme for syntax highlighting */
-@import 'highlight.js/styles/github.css';
+/* Syntax highlighting for dark theme */
+@import "highlight.js/styles/github-dark.css";
 
 @tailwind base;
 @tailwind components;
@@ -8,35 +8,24 @@
 
 /* Optimized image rendering for crisp profile photos */
 img.profile-image {
-  /* High-quality rendering */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: optimize-contrast;
   image-rendering: auto;
-  
-  /* Smooth scaling */
   object-fit: cover;
   object-position: center;
-  
-  /* Prevent blurring */
   transform: translateZ(0);
   backface-visibility: hidden;
-  
-  /* Anti-aliasing */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  /* Ensure crisp edges */
   border-radius: 50%;
 }
 
-/* For high-DPI displays, use the best quality */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   img.profile-image {
     image-rendering: -webkit-optimize-contrast;
   }
 }
 
-/* Remove any pixelation artifacts */
 @supports (image-rendering: crisp-edges) {
   img.profile-image {
     image-rendering: crisp-edges;
@@ -44,90 +33,46 @@ img.profile-image {
 }
 
 @layer base {
-  /**
-   * Tailwind CSS theme
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
   :root {
-    /* Quiet Systems Portfolio */
-    --background: 39 33% 95%; /* #F7F4EF */
-    --foreground: 60 5% 11%; /* #1E1E1B */
+    /* WCAG-friendly white-on-black */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 40 100% 98%;
-    --card-foreground: 60 5% 11%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 40 100% 98%;
-    --popover-foreground: 60 5% 11%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Muted slate-blue accent: #3F5F73 */
-    --primary: 202 29% 35%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 91%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 39 26% 90%;
-    --secondary-foreground: 60 5% 11%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 38 24% 91%;
-    --muted-foreground: 36 6% 40%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 198 24% 93%;
-    --accent-foreground: 202 29% 28%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 35 19% 83%;
-    --input: 35 19% 83%;
-    --ring: 202 29% 35%;
+    --border: 0 0% 23%;
+    --input: 0 0% 23%;
+    --ring: 0 0% 91%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 39 33% 95%;
-    --sidebar-foreground: 60 5% 18%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 32.1 94.6% 43.7%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 91%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 23%;
+    --sidebar-ring: 0 0% 91%;
   }
 }
 
@@ -140,11 +85,8 @@ img.profile-image {
     @apply bg-background text-foreground font-body;
     line-height: 1.65;
     letter-spacing: 0.005em;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(255, 252, 247, 0.92),
-      rgba(247, 244, 239, 0.98)
-    );
+    background-color: #000000;
+    color: #ffffff;
   }
 
   h1,
@@ -157,18 +99,18 @@ img.profile-image {
   }
 
   ::selection {
-    background: hsl(var(--accent));
-    color: hsl(var(--accent-foreground));
+    background: #ffffff;
+    color: #000000;
   }
 
   a {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-background;
   }
 }
 
 @layer components {
   .footer-link {
-    @apply rounded-sm text-portfolio-muted transition-colors hover:text-portfolio-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2;
+    @apply rounded-sm text-portfolio-muted transition-colors hover:text-portfolio-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-background;
   }
 }
 

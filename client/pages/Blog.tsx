@@ -77,8 +77,7 @@ const Blog = () => {
           Blog
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-portfolio-muted">
-          Short notes on pinned GitHub projects: purpose, experiments,
-          and what they show.
+          Project notes on what I built, what changed, and what the work achieved.
         </p>
       </div>
 
@@ -110,8 +109,8 @@ const Blog = () => {
                 aria-pressed={selectedTag === tag}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                   selectedTag === tag
-                    ? "bg-portfolio-primary text-white"
-                    : "bg-portfolio-surface text-portfolio-muted hover:bg-portfolio-soft-gray"
+                    ? "bg-portfolio-primary text-portfolio-background"
+                    : "bg-portfolio-surface text-portfolio-muted hover:border-portfolio-primary hover:text-portfolio-primary"
                 }`}
               >
                 {tag}
@@ -147,19 +146,19 @@ const Blog = () => {
         <div className="text-center py-16">
           {posts.length === 0 ? (
             <div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">
+              <h3 className="mb-2 text-xl font-semibold text-portfolio-dark-text">
                 No posts yet
               </h3>
-              <p className="text-gray-600">
+              <p className="text-portfolio-muted">
                 Blog posts will appear here once they are ready.
               </p>
             </div>
           ) : (
             <div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">
+              <h3 className="mb-2 text-xl font-semibold text-portfolio-dark-text">
                 No posts found
               </h3>
-              <p className="text-gray-600">
+              <p className="text-portfolio-muted">
                 Try adjusting your search terms or removing filters.
               </p>
             </div>

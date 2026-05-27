@@ -22,7 +22,6 @@ export const contact = {
 };
 
 export const hero = {
-  eyebrow: "Portfolio and project notes.",
   headline: "I build reliable systems for automation, data quality, and accessible web work.",
   subheadline: "I turn repetitive workflows into tools teams can run, review, and hand off.",
 };

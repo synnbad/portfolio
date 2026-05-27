@@ -26,7 +26,7 @@ const BlogLayout = ({
         {showBackButton && (
           <Link 
             to="/blog" 
-            className="mb-8 inline-flex items-center gap-2 rounded-sm text-portfolio-primary transition-colors hover:text-[#314B5B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 group"
+            className="mb-8 inline-flex items-center gap-2 rounded-sm text-portfolio-primary transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-background group"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" aria-hidden="true" />
             Back to Blog
@@ -62,7 +62,7 @@ const BlogLayout = ({
                       {tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-md bg-portfolio-accent px-2 py-1 text-xs font-medium text-portfolio-primary"
+                          className="rounded-md border border-portfolio-border bg-portfolio-surface px-2 py-1 text-xs font-medium text-portfolio-muted"
                         >
                           {tag}
                         </span>
@@ -75,7 +75,7 @@ const BlogLayout = ({
           </header>
         )}
         
-        <article className="prose prose-lg prose-gray max-w-none">
+        <article className="prose prose-lg prose-invert max-w-none">
           {children}
         </article>
       </div>

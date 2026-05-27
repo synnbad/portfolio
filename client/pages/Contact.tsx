@@ -25,7 +25,7 @@ function Contact() {
             <div className="flex flex-wrap gap-4">
               <a
                 href={`mailto:${contact.email}`}
-                className="inline-flex items-center justify-center rounded-md bg-portfolio-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#314B5B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-md bg-portfolio-primary px-6 py-3 text-sm font-medium text-portfolio-background transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-background"
               >
                 Email me
               </a>
@@ -49,7 +49,7 @@ function Contact() {
             <p className="mt-3 leading-7 text-portfolio-muted">
               Best for project and role conversations.
             </p>
-            <a className="mt-5 inline-block text-portfolio-primary hover:text-[#314B5B]" href={`mailto:${contact.email}`}>
+            <a className="mt-5 inline-block text-portfolio-primary hover:text-white" href={`mailto:${contact.email}`}>
               {contact.email}
             </a>
           </article>
@@ -62,7 +62,7 @@ function Contact() {
               Best for hiring context and quick updates.
             </p>
             <a
-              className="mt-5 inline-block text-portfolio-primary hover:text-[#314B5B]"
+              className="mt-5 inline-block text-portfolio-primary hover:text-white"
               href={contact.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -79,7 +79,7 @@ function Contact() {
               Public repositories, prototypes, and project docs.
             </p>
             <a
-              className="mt-5 inline-block text-portfolio-primary hover:text-[#314B5B]"
+              className="mt-5 inline-block text-portfolio-primary hover:text-white"
               href={contact.github}
               target="_blank"
               rel="noopener noreferrer"

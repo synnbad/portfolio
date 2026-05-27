@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${project.title} GitHub repository`}
-                  className="rounded-sm text-portfolio-primary hover:text-[#314B5B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
+                  className="rounded-sm text-portfolio-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-background"
                 >
                   GitHub
                 </a>
@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${project.title} demo`}
-                  className="rounded-sm text-portfolio-primary hover:text-[#314B5B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
+                  className="rounded-sm text-portfolio-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-background"
                 >
                   Demo
                 </a>
@@ -68,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
         <dl className="grid gap-5 md:grid-cols-2">
           <div className="border-t border-portfolio-border pt-4 md:col-span-2">
             <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-primary">
-              Why it matters
+              Impact
             </dt>
             <dd className="mt-2 leading-7 text-portfolio-dark-text">
               {project.result}

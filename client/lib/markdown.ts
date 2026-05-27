@@ -33,10 +33,17 @@ function calculateReadingTime(content: string): number {
 }
 
 // Parse markdown content with frontmatter
-export async function parseMarkdown(markdownContent: string, slug: string): Promise<BlogPost> {
+export async function parseMarkdown(
+  markdownContent: string,
+  slug: string,
+): Promise<BlogPost | null> {
   const { data, content } = matter(markdownContent);
   const frontmatter = data as BlogPostFrontmatter;
-  
+
+  if (frontmatter.published === false) {
+    return null;
+  }
+
   // Convert markdown to HTML
   const htmlContent = await marked(content);
   

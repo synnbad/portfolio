@@ -17,7 +17,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
             {post.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="rounded-md bg-portfolio-accent px-2 py-1 text-xs font-medium text-portfolio-primary"
+                className="rounded-md border border-portfolio-border bg-portfolio-surface px-2 py-1 text-xs font-medium text-portfolio-muted"
               >
                 {tag}
               </span>
@@ -58,7 +58,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
           {/* Read more link */}
           <Link
             to={`/blog/${post.slug}`}
-            className="inline-flex items-center gap-1 rounded-sm text-sm font-medium text-portfolio-primary transition-colors hover:text-blue-800"
+            className="inline-flex items-center gap-1 rounded-sm text-sm font-medium text-portfolio-primary transition-colors hover:text-white"
           >
             Read post
             <ArrowRight className="w-4 h-4" aria-hidden="true" />

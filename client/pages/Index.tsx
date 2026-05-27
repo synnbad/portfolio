@@ -20,10 +20,7 @@ function Index() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-portfolio-muted">
-                {hero.eyebrow}
-              </p>
-              <h1 className="mt-5 max-w-4xl font-heading text-4xl font-semibold leading-[1.05] text-portfolio-dark-text sm:text-5xl lg:text-6xl">
+              <h1 className="max-w-4xl font-heading text-4xl font-semibold leading-[1.05] text-portfolio-dark-text sm:text-5xl lg:text-6xl">
                 {hero.headline}
               </h1>
             </div>
@@ -42,7 +39,7 @@ function Index() {
                 <a
                   href={contact.resumePath}
                   download
-                  className="inline-flex items-center rounded-md px-1 py-3 text-sm font-semibold text-portfolio-primary underline-offset-4 transition-colors hover:text-[#314B5B] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
+                  className="inline-flex items-center rounded-md px-1 py-3 text-sm font-semibold text-portfolio-primary underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-background"
                 >
                   Download resume
                 </a>
@@ -113,18 +110,23 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-portfolio-primary px-4 py-12 text-white sm:px-6 lg:px-8">
+      <section className="border-t border-portfolio-border bg-white px-4 py-12 text-black sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="font-heading text-2xl font-semibold">
+            <h2 className="font-heading text-2xl font-semibold text-black">
               Want to discuss a project or role?
             </h2>
-            <p className="mt-3 max-w-3xl text-white/85">
+            <p className="mt-3 max-w-3xl text-black/80">
               Open to roles and projects in automation, data quality,
-              accessible web systems, CMS migration, and practical AI/cloud tooling.
+              accessible web systems, CMS management, and practical AI/cloud tooling.
             </p>
           </div>
-          <CustomButton href="/contact" variant="secondary" size="lg">
+          <CustomButton
+            href="/contact"
+            variant="primary"
+            size="lg"
+            className="bg-black text-white hover:bg-black/90"
+          >
             Contact me
           </CustomButton>
         </div>

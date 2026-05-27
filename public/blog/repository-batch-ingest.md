@@ -3,7 +3,7 @@ title: "Repository Batch Ingest: Turning Repeated Collection Work Into a Tool"
 date: "2026-05-04"
 description: "A short project note on the Python/Tkinter ingest workflow behind my repository automation work."
 tags: ["GitHub", "Python", "Automation"]
-published: true
+published: false
 ---
 
 `cetamura_python_script` is a Python project for preparing ingest packages in a digital repository workflow.

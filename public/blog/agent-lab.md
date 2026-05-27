@@ -3,7 +3,7 @@ title: "agent-lab: A Place to Make Agent Work Repeatable"
 date: "2026-05-05"
 description: "A short note on using agent-lab as an operating system for agents, workflows, guardrails, and project delivery."
 tags: ["GitHub", "AI", "Workflow"]
-published: true
+published: false
 ---
 
 `agent-lab` is where I organize reusable agent workflows, instructions, guardrails, and delivery patterns.

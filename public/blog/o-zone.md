@@ -3,7 +3,7 @@ title: "O-Zone: Making Air Quality Data Easier to Act On"
 date: "2026-05-02"
 description: "A short project note on the AWS AI Maker Hackathon air-quality platform pinned on my GitHub profile."
 tags: ["GitHub", "AWS", "AI"]
-published: true
+published: false
 ---
 
 `O-Zone` is an AWS AI Maker Hackathon project focused on air-quality decisions.

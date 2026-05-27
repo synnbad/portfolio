@@ -20,14 +20,14 @@ export default {
       colors: {
         // Portfolio Brand Colors
         portfolio: {
-          primary: "#3F5F73",
-          accent: "#E7EEF1",
-          background: "#F7F4EF",
-          surface: "#FFFCF7",
-          "dark-text": "#1E1E1B",
-          muted: "#6B665F",
-          border: "#DDD6CB",
-          "soft-gray": "#EAE3D8",
+          primary: "#E8E8E8",
+          accent: "#1A1A1A",
+          background: "#000000",
+          surface: "#111111",
+          "dark-text": "#FFFFFF",
+          muted: "#B3B3B3",
+          border: "#3A3A3A",
+          "soft-gray": "#1A1A1A",
         },
         // Keep existing design system colors for components
         border: "hsl(var(--border))",

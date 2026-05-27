@@ -22,12 +22,12 @@ function Resume() {
                 CMS migration, accessibility review, and clear handoffs.
               </p>
               <div className="mt-6 flex flex-wrap gap-4 text-sm text-portfolio-muted">
-                <a className="text-portfolio-primary hover:text-[#314B5B]" href={`mailto:${contact.email}`}>
+                <a className="text-portfolio-primary hover:text-white" href={`mailto:${contact.email}`}>
                   {contact.email}
                 </a>
                 <span>{contact.location}</span>
                 <a
-                  className="text-portfolio-primary hover:text-[#314B5B]"
+                  className="text-portfolio-primary hover:text-white"
                   href={contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -35,7 +35,7 @@ function Resume() {
                   LinkedIn
                 </a>
                 <a
-                  className="text-portfolio-primary hover:text-[#314B5B]"
+                  className="text-portfolio-primary hover:text-white"
                   href={contact.github}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -47,7 +47,7 @@ function Resume() {
             <a
               href={contact.resumePath}
               download
-              className="inline-flex items-center justify-center rounded-md bg-portfolio-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#314B5B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2"
+              className="inline-flex items-center justify-center rounded-md bg-portfolio-primary px-6 py-3 text-sm font-medium text-portfolio-background transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-primary focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-background"
             >
               Download resume
             </a>

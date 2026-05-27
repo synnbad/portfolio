@@ -73,13 +73,13 @@ const BlogPost = () => {
     >
       {/* Blog Content */}
       <div 
-        className="prose prose-lg prose-gray max-w-none
+        className="prose prose-lg prose-invert max-w-none
           prose-headings:font-heading prose-headings:text-portfolio-dark-text
           prose-p:text-portfolio-muted prose-p:leading-relaxed
           prose-a:text-portfolio-primary prose-a:no-underline hover:prose-a:underline
           prose-strong:text-portfolio-dark-text prose-strong:font-semibold
-          prose-code:text-portfolio-primary prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
-          prose-pre:bg-gray-900 prose-pre:text-gray-100
+          prose-code:text-portfolio-primary prose-code:bg-portfolio-surface prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+          prose-pre:bg-portfolio-surface prose-pre:text-portfolio-dark-text
           prose-blockquote:border-l-portfolio-primary prose-blockquote:text-portfolio-muted
           prose-img:rounded-md
           prose-hr:border-portfolio-border"
@@ -87,7 +87,7 @@ const BlogPost = () => {
       />
 
       {/* Post Footer */}
-      <div className="mt-16 pt-8 border-t border-gray-200">
+      <div className="mt-16 pt-8 border-t border-portfolio-border">
         <div className="border-t border-portfolio-border pt-6 text-center">
           <h3 className="font-heading text-lg font-semibold text-portfolio-dark-text mb-2">
             Want to talk through this?
@@ -99,7 +99,7 @@ const BlogPost = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center rounded-md bg-portfolio-primary px-4 py-2 text-white transition-colors hover:bg-[#314B5B]"
+              className="inline-flex items-center rounded-md bg-portfolio-primary px-4 py-2 text-portfolio-background transition-colors hover:bg-white"
             >
               Get in Touch
             </Link>

@@ -3,7 +3,7 @@ title: "how-to-exit-vim: A Fork, Not a Portfolio Case Study"
 date: "2026-04-30"
 description: "A short note on why a small forked repo is pinned and how I frame it."
 tags: ["GitHub", "Tools"]
-published: true
+published: false
 ---
 
 `how-to-exit-vim` is a fork, not a portfolio case study.

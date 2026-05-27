@@ -3,7 +3,7 @@ title: "ILPD Liver Disease Project: A Data Mining Practice Repo"
 date: "2026-05-01"
 description: "A short note on the data mining coursework project pinned on my GitHub profile."
 tags: ["GitHub", "Data", "Analytics"]
-published: true
+published: false
 ---
 
 `ILPD_Liver_Disease_Final_Project` is a data mining and analytics project built around the Indian Liver Patient Dataset.
