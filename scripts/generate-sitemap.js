@@ -32,12 +32,6 @@ const pages = [
     lastmod: currentDate
   },
   {
-    url: '/#/about',
-    priority: '0.8',
-    changefreq: 'monthly',
-    lastmod: currentDate
-  },
-  {
     url: '/#/resume',
     priority: '0.8',
     changefreq: 'monthly',

@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout";
-import CustomButton from "@/components/ui/custom-button";
 import { certifications } from "@/data/portfolio";
 
 const Certifications = () => {
@@ -37,21 +36,6 @@ const Certifications = () => {
                 <p className="mt-4 leading-7 text-portfolio-muted">{cert.relevance}</p>
               </article>
             ))}
-          </div>
-
-          <div className="mt-12 border-t border-portfolio-border pt-6">
-            <h2 className="font-heading text-2xl font-semibold text-portfolio-dark-text">
-              How they connect
-            </h2>
-            <p className="mt-3 max-w-3xl leading-7 text-portfolio-muted">
-              These support practical work: automation habits, cloud literacy,
-              and careful AI use in real workflows.
-            </p>
-            <div className="mt-6">
-              <CustomButton href="/projects" variant="outline">
-                View selected work
-              </CustomButton>
-            </div>
           </div>
         </div>
       </section>

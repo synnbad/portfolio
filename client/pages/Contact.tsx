@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import CustomButton from "@/components/ui/custom-button";
-import { contact, focusAreas } from "@/data/portfolio";
+import { contact } from "@/data/portfolio";
 
 function Contact() {
   return (
@@ -87,24 +87,6 @@ function Contact() {
               GitHub profile
             </a>
           </article>
-        </div>
-      </section>
-
-      <section className="bg-portfolio-surface px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="fit-heading">
-        <div className="mx-auto max-w-7xl">
-          <h2 id="fit-heading" className="font-heading text-3xl font-semibold text-portfolio-dark-text">
-            Good fit
-          </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {focusAreas.map((area) => (
-              <article key={area.title} className="border-t border-portfolio-border pt-5">
-                <h3 className="font-heading text-xl font-semibold text-portfolio-dark-text">
-                  {area.title}
-                </h3>
-                <p className="mt-3 leading-7 text-portfolio-muted">{area.description}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
     </Layout>

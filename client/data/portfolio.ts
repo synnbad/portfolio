@@ -27,29 +27,6 @@ export const hero = {
   subheadline: "I turn repetitive workflows into tools teams can run, review, and hand off.",
 };
 
-export const focusAreas = [
-  {
-    title: "Automation",
-    description:
-      "Python tools, batch jobs, API checks, and logging for repeatable work.",
-  },
-  {
-    title: "Data quality",
-    description:
-      "Validation rules, duplicate checks, metadata review, and clear handoff notes.",
-  },
-  {
-    title: "Accessible web systems",
-    description:
-      "WCAG review, CMS cleanup, clearer navigation, and contributor-friendly fixes.",
-  },
-  {
-    title: "Practical AI and cloud",
-    description:
-      "AI, API, and cloud tools used only when they improve clarity or maintenance.",
-  },
-];
-
 export const projects: ProjectCaseStudy[] = [
   {
     title: "Repository Batch Ingest",

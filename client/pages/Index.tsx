@@ -5,7 +5,6 @@ import {
   contact,
   experience,
   featuredProjectTitles,
-  focusAreas,
   hero,
   projects,
 } from "@/data/portfolio";
@@ -82,35 +81,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-portfolio-surface px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="work-heading">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-muted">
-              Operating style
-            </p>
-            <h2 id="work-heading" className="mt-3 font-heading text-3xl font-semibold text-portfolio-dark-text">
-              How I work
-            </h2>
-            <p className="mt-4 leading-7 text-portfolio-muted">
-              I find repeated steps, missing checks, and brittle handoffs.
-              Then I build the smallest system that makes the work repeatable.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2">
-            {focusAreas.map((area) => (
-              <article key={area.title} className="border-t border-portfolio-border pt-5">
-                <h3 className="font-heading text-xl font-semibold text-portfolio-dark-text">
-                  {area.title}
-                </h3>
-                <p className="mt-3 leading-7 text-portfolio-muted">{area.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="recent-heading">
+      <section className="bg-portfolio-surface px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="recent-heading">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
